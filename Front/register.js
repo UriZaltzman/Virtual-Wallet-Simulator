@@ -18,7 +18,8 @@ document.getElementById('button').addEventListener('click',async ()=> {
     });
 
     const data = await response.json();
-    alert(data.message);
+    console.log(data);
+    alert(data);
     
     if (data.success) {
         window.location.href = '/validate';

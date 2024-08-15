@@ -11,7 +11,7 @@ document.getElementById('button').addEventListener('click',async ()=> {
     });
 
     const data = await response.json();
-    alert(data.message);
+    alert(data);
     
     if (data.success) {
         window.location.href = '/validate';
