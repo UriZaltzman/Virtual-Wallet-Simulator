@@ -82,7 +82,7 @@ body {
 
 .transeferir_dinero,
 .ingresar_dinero {
-    display: flez;
+    display: flex;
     width: 150px; /* Adjust button width */
     padding: 10px 30px;
     border: none;
@@ -97,7 +97,11 @@ body {
     bottom: 145px;
     left: 33px;
 }
-
+.transeferir_dinero i{
+    position: relative;
+    left: 15px;
+    bottom: px; 
+}
 .cargar_sube,
 .cargar_datos,
 .pagar_impuestos {
@@ -117,10 +121,14 @@ body {
 }
 
 .cargar_sube img {
-    width: 80%; /* Ajusta el tamaño de la imagen dentro del botón */
-    height: 80%;
+    position: relative;
+    width: 110%; /* Ajusta el tamaño de la imagen dentro del botón */
+    height: 110%;
+    justify-content: center;
+    align-items: center;
+    right: 2px;
     object-fit: cover; /* Asegura que la imagen se ajuste correctamente al botón */
-    border-radius: 50%; /* Mantiene la imagen circular dentro del botón */
+    border-radius: 20%; /* Mantiene la imagen circular dentro del botón */
 }
 
 /* Link Styling */

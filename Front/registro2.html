@@ -1,0 +1,43 @@
+<!-- 
+    cosas que tienen qeue haber en el registro:
+    - Nombre completo
+    - Apellido
+    - Edad
+    - DNI
+    - Direccion
+    - Correo electronico
+    - Telefono
+    - Contrasena
+    - Contrasena nuevamente
+    - 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="registro2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registrate!</h1>
+        <div class="infoPersona">
+            <input type="text" placeholder="Ingresa tu nombre" id="nombre" required  minlength="3" maxlength="30"><i class='bx bxs-user'></i>
+            <input type="text" placeholder="Ingresa tu apellido" id="apellido" minlength="1" maxlength="20" required><i class='bx bxs-user'></i>
+            <input type="date" placeholder="Ingresa tu edad" id="edad" required><i class='bx bxs-party'></i>
+            <input type="number" placeholder="Ingresa tu DNI" id="DNI" minlength="7" required><i class='bx bxs-id-card'></i>
+            <input type="text" placeholder="Ingresa tu direccion" id="direccion" required><i class='bx bxs-direction-right'></i>
+            <input type="number" placeholder="Ingresa tu telefono" id="telefono" required><i class='bx bxs-phone' ></i>
+            <input type="email" placeholder="Ingresa tu correo electronico" id="email" required><i class='bx bxl-gmail'></i>
+            <input type="password" placeholder="Ingresa tu contraseña" id="contrasena" required><i class='bx bxs-lock-alt'></i>
+            <input type="password" placeholder="Ingresa tu contraseña" id="contrasena" required><i class='bx bxs-lock-alt'></i>
+        </div>
+        <div class="buttonRegistrarme">
+            <button type="submit" id="buttonRegistrar">Registrarse</button>
+        </div>
+    </div>
+</body>
+</html>
