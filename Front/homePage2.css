@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: sans-serif;
-    background-color: #fff; /* Set background color */
+    background-color: #000000; /* Set background color */
 }
 
 #wrapper {
@@ -23,7 +23,7 @@ body {
 
 .iconsUp i {
     font-size: 50px;
-    color: #000; /* Icon color */
+    color: #39ff14; /* Icon color */
     cursor: pointer;
     margin-left: 20px; /* Space between icons */
 }
@@ -34,7 +34,7 @@ body {
 }
 
 .iconsUp a :hover{
-    color: blue;
+    color: #14d0ff;
 }
 
 /* Rectangle for Monto Display */
@@ -45,7 +45,7 @@ body {
     justify-content: center;
     width: 80%;
     height: 180px;
-    background-color:rgb(220, 0, 158);  
+    background-color:#39ff14;  
     border-radius: 20px;
     margin-bottom: 40px;
 }
@@ -53,13 +53,18 @@ body {
 /* Monto Display */
 .monto {
     position: relative;
-    bottom: 180px;
-    right: 120px;
+    bottom: 190px;
+    right: 115px;
     text-align: center;
     font-weight: bold;
     font-size: 45px;
     color: #fff;
     margin-bottom: 20px;
+}
+
+.bx bxs-coin-stack{
+    position: relative;
+    bottom: 2px;
 }
 
 /* Button Styles */
@@ -89,19 +94,42 @@ body {
     border-radius: 20px;
     font-size: 18px;
     cursor: pointer;
-    background-color: beige;
+    background-color: #000;
     text-align: center;
     align-items: center;
     margin-bottom: 10px;
     position: relative;
     bottom: 145px;
-    left: 33px;
+    left: 18px;
 }
+
+/* Estilo del enlace dentro de los botones para que el texto sea blanco */
+.transeferir_dinero a,
+.ingresar_dinero a {
+    color: #fff !important; /* Asegura que el color del texto sea blanco */
+    text-decoration: none; /* Sin subrayado */
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+}
+
+.transeferir_dinero a,
+.ingresar_dinero a {
+    color: #fff !important; /* Asegura que el icono también sea blanco */
+}
+
 .transeferir_dinero i{
     position: relative;
     left: 15px;
-    bottom: px; 
+    color: white;
 }
+
+.ingresar_dinero i{
+    position: relative;
+    left: 15px;
+    color: white;
+}
+
 .cargar_sube,
 .cargar_datos,
 .pagar_impuestos {
@@ -112,8 +140,8 @@ body {
     height: 83px;
     flex-shrink: 0;
     position: relative;
-    right: 280px;
-    background-color: salmon; /* Color de fondo del botón */
+    right: 310px;
+    background-color: #39ff14; /* Color de fondo del botón */
     border: none;
     border-radius: 50%; /* Asegúrate de que el valor sea 50% */
     text-align: center;
@@ -122,11 +150,11 @@ body {
 
 .cargar_sube img {
     position: relative;
-    width: 110%; /* Ajusta el tamaño de la imagen dentro del botón */
-    height: 110%;
+    width: 90%; /* Ajusta el tamaño de la imagen dentro del botón */
+    height: 90%;
     justify-content: center;
     align-items: center;
-    right: 2px;
+    top:2px;
     object-fit: cover; /* Asegura que la imagen se ajuste correctamente al botón */
     border-radius: 20%; /* Mantiene la imagen circular dentro del botón */
 }
@@ -139,4 +167,12 @@ body {
 .pagar_impuestos a {
     text-decoration: none;
     color: #000; /* Link text color */
+}
+
+.pagar_impuestos i{
+    font-size: 40px;
+}
+
+.cargar_datos i{
+    font-size: 40px;
 }
