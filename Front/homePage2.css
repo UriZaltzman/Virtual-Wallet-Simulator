@@ -1,43 +1,40 @@
-/* General Styles */
 body {
     font-family: sans-serif;
-    background-color: #000000; /* Set background color */
+    background-color: #000;
 }
 
 #wrapper {
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    width: 430px;
-    height: 932px;
+    width: 100%; /* Ensure full width on mobile */
+    max-width: 420px; /* Set a max width for large screens */
+    height: 932px; /* Set height to mimic a mobile screen */
+    margin: 0 auto; /* Center the wrapper on larger screens */
+    padding: 10px;
 }
 
-/* Top Icons */
+
 .iconsUp {
     display: flex;
-    justify-content: flex-end; /* Align icons to the right */
+    position: relative;
     align-items: center;
-    width: 80%;
-    padding: 20px 0;
+    justify-content: space-around;
+    width: 100%;
+    padding: 10px 0;
 }
 
 .iconsUp i {
     font-size: 50px;
-    color: #39ff14; /* Icon color */
+    color: #39ff14; 
     cursor: pointer;
-    margin-left: 20px; /* Space between icons */
-}
-
-.iconsUp .bx-menu {
-    position: relative;
-    right: 145px; /* Pushes the menu icon to the left */
 }
 
 .iconsUp a :hover{
     color: #14d0ff;
 }
 
-/* Rectangle for Monto Display */
 .rectangleMonto {
     display: flex;
     position: relative;
@@ -50,11 +47,12 @@ body {
     margin-bottom: 40px;
 }
 
-/* Monto Display */
+
 .monto {
+    display: flex   ;
     position: relative;
     bottom: 190px;
-    right: 115px;
+    right: 70px;
     text-align: center;
     font-weight: bold;
     font-size: 45px;
@@ -67,20 +65,19 @@ body {
     bottom: 2px;
 }
 
+
 /* Button Styles */
 .buttons {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    gap: 20px;
+    justify-content: space-around; /* Space buttons evenly */
     width: 100%;
-    margin-top: -50px;
+    margin-top: -30px;
 }
 
 .buttons-row {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-around;
     width: 100%;
     margin-top: 10px;
 }
@@ -88,46 +85,17 @@ body {
 .transeferir_dinero,
 .ingresar_dinero {
     display: flex;
-    width: 150px; /* Adjust button width */
-    padding: 10px 30px;
+    justify-content: center;
+    align-items: center;
+    width: 120px; /* Adjust button width */
+    padding: 10px;
     border: none;
     border-radius: 20px;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
     background-color: #000;
+    color: #fff; /* Ensure text color is white */
     text-align: center;
-    align-items: center;
-    margin-bottom: 10px;
-    position: relative;
-    bottom: 145px;
-    left: 18px;
-}
-
-/* Estilo del enlace dentro de los botones para que el texto sea blanco */
-.transeferir_dinero a,
-.ingresar_dinero a {
-    color: #fff !important; /* Asegura que el color del texto sea blanco */
-    text-decoration: none; /* Sin subrayado */
-    width: 100%;
-    text-align: center;
-    display: inline-block;
-}
-
-.transeferir_dinero a,
-.ingresar_dinero a {
-    color: #fff !important; /* Asegura que el icono también sea blanco */
-}
-
-.transeferir_dinero i{
-    position: relative;
-    left: 15px;
-    color: white;
-}
-
-.ingresar_dinero i{
-    position: relative;
-    left: 15px;
-    color: white;
 }
 
 .cargar_sube,
@@ -136,37 +104,41 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 85px;
-    height: 83px;
-    flex-shrink: 0;
-    position: relative;
-    right: 310px;
-    background-color: #39ff14; /* Color de fondo del botón */
+    width: 75px;
+    height: 75px;
+    background-color: #39ff14;
     border: none;
-    border-radius: 50%; /* Asegúrate de que el valor sea 50% */
+    border-radius: 50%;
     text-align: center;
     font-size: 12px;
 }
 
+/* Link Styling */
+.transeferir_dinero a,
+.ingresar_dinero a {
+    text-decoration: none;
+    color: #fff; /* Ensure link text color is white */
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+}
 .cargar_sube img {
     position: relative;
-    width: 90%; /* Ajusta el tamaño de la imagen dentro del botón */
+    width: 90%; 
     height: 90%;
     justify-content: center;
     align-items: center;
     top:2px;
-    object-fit: cover; /* Asegura que la imagen se ajuste correctamente al botón */
-    border-radius: 20%; /* Mantiene la imagen circular dentro del botón */
+    object-fit: cover; 
+    border-radius: 10%; 
 }
 
-/* Link Styling */
-.transeferir_dinero a,
-.ingresar_dinero a,
+
 .cargar_sube a,
 .cargar_datos a,
 .pagar_impuestos a {
     text-decoration: none;
-    color: #000; /* Link text color */
+    color: #000;  
 }
 
 .pagar_impuestos i{
@@ -175,4 +147,4 @@ body {
 
 .cargar_datos i{
     font-size: 40px;
-}
+}  
