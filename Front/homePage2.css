@@ -31,6 +31,10 @@ body {
     cursor: pointer;
 }
 
+.juntosIcons{
+    display: flex;
+}
+
 .iconsUp a :hover{
     color: #14d0ff;
 }
@@ -50,21 +54,33 @@ body {
 
 .monto {
     display: flex   ;
-    position: relative;
-    bottom: 190px;
-    right: 70px;
     text-align: center;
     font-weight: bold;
     font-size: 45px;
     color: #fff;
     margin-bottom: 20px;
 }
-
-.bx bxs-coin-stack{
+.monedas{
+    display: flex;
     position: relative;
-    bottom: 2px;
+    bottom: 190px;
+    left: 3px;
 }
 
+
+.transeferir_dinero,
+.ingresar_dinero {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #000;
+    color: #fff; /* Ensure text color is white */
+}
 
 /* Button Styles */
 .buttons {
@@ -80,22 +96,6 @@ body {
     justify-content: space-around;
     width: 100%;
     margin-top: 10px;
-}
-
-.transeferir_dinero,
-.ingresar_dinero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 120px; /* Adjust button width */
-    padding: 10px;
-    border: none;
-    border-radius: 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #000;
-    color: #fff; /* Ensure text color is white */
-    text-align: center;
 }
 
 .cargar_sube,

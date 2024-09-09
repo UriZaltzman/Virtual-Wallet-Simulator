@@ -5,40 +5,39 @@
 .container {
     display: flex;  
     flex-direction: column;
-    align-items: flex-start;
-    margin: 10px 400px;
+    align-items: center;
+    margin: 10px 10px;
 }
 
 .container h1{
     font-size: 45px;
-    position: relative;
-    right: 60px;
 }
 
 .infoPersona i {
-    position: relative;
-    bottom: -1.8px;
     font-size: 20px;
-    left: 38px;
+    right: 400px;
 }
 
 .infoPersona input{
-    position: relative;
-    width: 300px;
-    height: 30px;
+    display: flex;
+    flex-direction: row;
+    padding: 7px;
     margin-bottom:20px;
     border-color: #000;
     border-radius: 10px;
     align-items: center;
-    left: 30px;
+    left: 80px;
 }
 
 .buttonRegistrarme button{
     position: relative;
     right: 65px;
     margin-top: 10px;
-    width: 200px;
     height: 30px;
     font-size: 18px;
     border-radius: 20px;
+}
+
+button:hover{
+    transform: scale(1.05);
 }

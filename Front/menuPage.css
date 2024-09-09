@@ -1,0 +1,89 @@
+/* General body styling */
+/* Reset de márgenes y padding para todo */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos generales del body */
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+}
+
+/* Iconos de la parte superior alineados */
+.iconsUp {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0px 450px;
+    padding: 20px 0px;
+}
+
+/* Estilos para los iconos de menú y usuario */
+.iconsUp i {
+    font-size: 50px;
+    color: #39ff14; 
+    cursor: pointer;
+}
+
+.iconMenu a, .iconUser a {
+    text-decoration: none;
+}
+
+.iconsUp a :hover{
+    color: #14d0ff;
+}
+
+/* Contenedor de los botones */
+.buttonsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+/* Botones alineados a lo largo de la pantalla */
+.buttonsContainer a {
+    width: 100px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.buttonsContainer button {
+    width: 110%;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #39ff14;
+    color: black;
+    border: none;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+button{
+    margin-bottom: 20px;
+}
+
+.buttonsContainer button:hover {
+    background-color: #14d0ff;
+    transform: scale(1.05);
+}
+
+.buttonsContainer button i {
+    font-size: 20px;
+    color: black;
+}
+
