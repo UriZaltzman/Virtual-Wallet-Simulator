@@ -7,7 +7,7 @@
 
 body{
     background: #000;
-    height: 150vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,7 +25,7 @@ body{
     align-items: center;
 }
 
-.container h1{
+.container h2{
     text-align: center;
     margin-bottom: 20px;
     font-size: 24px;
@@ -34,33 +34,52 @@ body{
     color: #39ff14;
 }
 
-i {
-    font-size: 20px;
-    margin-left: 310px;
-    position: relative;
-    bottom: 42px;
+.code-input {
+    display: flex;
+    margin-bottom: 20px; /* Add some space below the input */
 }
 
-input {
-    width: 90%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
+.code-input input {
+    width: 40px;
+    height: 40px; /* Make the input squares */
+    margin: 0 5px; /* Add some space between inputs */
+    text-align: center;
+    font-size: 18px;
+    border: 2px solid #39ff14;
+    border-radius: 8px;
     background-color: #ffffff20;
     color: #fff;
-    font-size: 16px;
-    border-radius: 15px;
 }
 
-input::placeholder {
-    color: #ffffff20;
+.Reenviar{
+    display: flex;
+    text-align: center;
 }
 
-.buttonRegistrarme button{
+.Reenviar a{
+    text-decoration: none;
+    color: #39ff14;
+    font-weight: bold;
+    margin-left: 4px;
+}
+
+.Reenviar p{
+    color: #fff;
+}
+.Reenviar a, p{
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.Reenviar a:hover {
+    text-decoration: underline;
+}
+
+button{
     align-items: center;
     margin-top: 10px;
-    width: 100%;
-    padding: 12px 70px;
+    width: 80%;
+    padding: 12px 60px;
     border: none;
     border-radius: 20px;
     background-color: #39ff14;
@@ -73,15 +92,3 @@ input::placeholder {
 button:hover{
     transform: scale(1.05);
 }
-
-span{
-    position: relative;
-    left: 11px;
-    top:5px;
-    font-size: 20px;
-}
-
-i, span {
-    margin-bottom: 4px;
-} 
-

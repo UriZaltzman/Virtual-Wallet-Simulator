@@ -44,7 +44,7 @@ input {
 }
 
 input::placeholder {
-    color: #39ff14;
+    color: #ffffff20;
 }
 
 button {
@@ -87,7 +87,8 @@ button {
     color: #39ff14;
     text-decoration: none;
     font-weight: bold;
-    margin-left: 120px;
+    margin-left: 135px;
+    font-size: 14px;
 }
 
 .forgotPassword:hover {

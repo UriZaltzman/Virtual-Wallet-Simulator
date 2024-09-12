@@ -1,28 +1,35 @@
-body {
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: sans-serif;
-    background-color: #000;
+}
+
+body{
+    background: #000;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
 }
 
 #wrapper {
+    width: 350px;
+    background-color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #39ff14;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    width: 100%; /* Ensure full width on mobile */
-    max-width: 420px; /* Set a max width for large screens */
-    height: 932px; /* Set height to mimic a mobile screen */
-    margin: 0 auto; /* Center the wrapper on larger screens */
-    padding: 10px;
-    border: #39ff14 solid;
-    border-radius: 20px;
 }
-
 
 .iconsUp {
     display: flex;
     position: relative;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
     padding: 10px 0;
 }
@@ -46,13 +53,11 @@ body {
     position: relative;
     align-items: center;
     justify-content: center;
-    width: 80%;
-    height: 180px;
+    width: 90%;
+    height: 160px;
     background-color:#39ff14;  
-    border-radius: 20px;
-    margin-bottom: 40px;
+    border-radius: 15px;
 }
-
 
 .monto {
     display: flex   ;
@@ -60,17 +65,18 @@ body {
     font-weight: bold;
     font-size: 45px;
     color: #fff;
-    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-left: 15px;
 }
+
 .monedas{
     display: flex;
     position: relative;
     bottom: 190px;
-    left: 3px;
+    left: 70px;
 }
 
-
-.transeferir_dinero,
+.transeferir_dinero ,
 .ingresar_dinero {
     display: flex;
     align-items: center;
@@ -81,41 +87,8 @@ body {
     font-size: 16px;
     cursor: pointer;
     background-color: #000;
-    color: #fff; /* Ensure text color is white */
 }
 
-/* Button Styles */
-.buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around; /* Space buttons evenly */
-    width: 100%;
-    margin-top: -30px;
-}
-
-.buttons-row {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin-top: 10px;
-}
-
-.cargar_sube,
-.cargar_datos,
-.pagar_impuestos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 75px;
-    height: 75px;
-    background-color: #39ff14;
-    border: none;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 12px;
-}
-
-/* Link Styling */
 .transeferir_dinero a,
 .ingresar_dinero a {
     text-decoration: none;
@@ -124,17 +97,65 @@ body {
     text-align: center;
     display: inline-block;
 }
+
+.rectangleMonto {
+    position: relative; /* Allow positioning children */
+}
+
+.btnJuntos {
+    position: relative; /* Position the buttons absolutely */
+    bottom: 120px; /* Adjust bottom position as needed */
+    left: 32.5px; /* Center horizontally */
+    transform: translateX(-50%); 
+    display: flex;
+    gap: 10px; /* Space between buttons */
+}
+
+.transeferir_dinero, .ingresar_dinero {
+    background-color: black; /* White button background */
+    color: #fff; /* Green text color */
+    padding: 10px 20px; /* Adjust padding as needed */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.transeferir_dinero i, .ingresar_dinero i{
+    position: relative;
+    left: 10px;
+}
+
+
+/* Button Styles */
+.buttons {
+    display: flex;
+    justify-content: space-evenly; /* Space buttons evenly */
+    width: 100%;
+}
+
+.cargar_sube,
+.cargar_datos,
+.pagar_impuestos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    background-color: #39ff14;
+    border: none;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+/* Link Styling */
 .cargar_sube img {
     position: relative;
-    width: 90%; 
-    height: 90%;
+    width: 70%; 
+    height: 70%;
     justify-content: center;
     align-items: center;
     top:2px;
     object-fit: cover; 
     border-radius: 10%; 
 }
-
 
 .cargar_sube a,
 .cargar_datos a,
@@ -150,3 +171,4 @@ body {
 .cargar_datos i{
     font-size: 40px;
 }  
+
