@@ -17,6 +17,11 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
+        if (repetirContrasena != contrasena){
+            alert("Reescriba tu contraseña, no son la misma en los dos campos");
+            return;
+        }
+
         const infoPersona = {
             nombre: nombre,
             apellido: apellido,

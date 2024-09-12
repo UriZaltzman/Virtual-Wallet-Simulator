@@ -1,16 +1,3 @@
-<!-- 
-    cosas que tienen qeue haber en el registro:
-    - Nombre completo
-    - Apellido
-    - Edad
-    - DNI
-    - Direccion
-    - Correo electronico
-    - Telefono
-    - Contrasena
-    - Contrasena 
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,14 +17,32 @@
             <input type="number" placeholder="Ingresa tu DNI" id="DNI" minlength="7" ><i class='bx bxs-id-card'></i>
             <input type="text" placeholder="Ingresa tu direccion" id="direccion" ><i class='bx bxs-location-plus'></i>
             <input type="email" placeholder="Ingresa tu correo electronico" id="email" ><i class='bx bxl-gmail'></i>
-            <input type="password" placeholder="Ingresa tu contraseña" id="contrasena" ><i class='bx bxs-lock-alt'></i>
-            <input type="password" placeholder="Repetir tu contraseña" id="repetirContrasena" ><i class="bx bxs-lock-alt"></i>
+            <input type="password" placeholder="Ingresa tu contraseña" id="passwordId"><i class='bx bx-low-vision' id="passIconId" onclick="showPass()"></i><i class='bx bxs-lock-alt'></i>
+            <input type="password" placeholder="Repetir tu contraseña" id="repetirContrasena"><i class='bx bxs-lock-alt'></i>
         </div>
         <div class="buttonRegistrarme">
             <button type="submit" id="buttonRegistrar">Registrate</button>
         </div>
     </div>
+
+    <script>
+        function showPass() {
+            var passwordField = document.getElementById("passwordId");
+            var icon = document.getElementById("passIconId");
+
+            // Alternar entre mostrar y ocultar la contraseña
+            if (passwordField.type === "password") {
+                passwordField.type = "text"; // Mostrar la contraseña
+                icon.classList.remove('bx-low-vision');
+                icon.classList.add('bx-show-alt'); // Cambia el ícono a uno de ojo
+            } else {
+                passwordField.type = "password"; // Ocultar la contraseña
+                icon.classList.remove('bx-show-alt');
+                icon.classList.add('bx-low-vision'); // Cambia el ícono de vuelta a "low-vision"
+            }
+        }
+    </script>
+
     <script src="registro2.js"></script>
 </body>
 </html>
-

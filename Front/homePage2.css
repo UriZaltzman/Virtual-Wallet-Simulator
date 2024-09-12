@@ -99,23 +99,23 @@ body{
 }
 
 .rectangleMonto {
-    position: relative; /* Allow positioning children */
+    position: relative; 
 }
 
 .btnJuntos {
-    position: relative; /* Position the buttons absolutely */
-    bottom: 120px; /* Adjust bottom position as needed */
-    left: 32.5px; /* Center horizontally */
+    position: relative; 
+    bottom: 120px; 
+    left: 32.5px; 
     transform: translateX(-50%); 
     display: flex;
-    gap: 10px; /* Space between buttons */
+    gap: 10px; 
 }
 
 .transeferir_dinero, .ingresar_dinero {
-    background-color: black; /* White button background */
-    color: #fff; /* Green text color */
-    padding: 10px 20px; /* Adjust padding as needed */
-    border-radius: 10px; /* Rounded corners */
+    background-color: black; 
+    color: #fff; 
+    padding: 10px 20px; 
+    border-radius: 10px; 
 }
 
 .transeferir_dinero i, .ingresar_dinero i{
@@ -123,11 +123,9 @@ body{
     left: 10px;
 }
 
-
-/* Button Styles */
 .buttons {
     display: flex;
-    justify-content: space-evenly; /* Space buttons evenly */
+    justify-content: space-evenly; 
     width: 100%;
 }
 
@@ -145,7 +143,6 @@ body{
     font-size: 12px;
 }
 
-/* Link Styling */
 .cargar_sube img {
     position: relative;
     width: 70%; 
