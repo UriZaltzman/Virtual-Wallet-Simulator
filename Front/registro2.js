@@ -9,27 +9,20 @@ document.addEventListener("DOMContentLoaded", function() {
         const DNI = document.getElementById("DNI").value;
         const direccion = document.getElementById("direccion").value;
         const email = document.getElementById("email").value;
-        const contrasena = document.getElementById("contrasena").value; // Asegúrate de usar "contrasena"
-        const repetirContrasena = document.getElementById("repetirContrasena").value; // Asegúrate de usar "repetirContrasena"
-        // Validación de los valores antes de enviar al servidor
-        if (!nombre || !apellido || !DNI || !direccion || !email || !contrasena || !repetirContrasena) {
-            alert("Por favor, completa todos los campos.");
-            return;
-        }
+        const contrasena = document.getElementById("contrasena").value;
 
-        if (repetirContrasena != contrasena){
-            alert("Reescriba tu contraseña, no son la misma en los dos campos");
+        if (!nombre || !apellido || !email || !contrasena || !DNI || !direccion) {
+            alert("Por favor, completa todos los campos.");
             return;
         }
 
         const infoPersona = {
             nombre: nombre,
             apellido: apellido,
-            DNI: DNI,
-            direccion: direccion,
             email: email,
-            contrasena: contrasena, 
-            repetirContrasena: repetirContrasena 
+            contrasena: contrasena,
+            DNI: DNI,
+            direccion: direccion, 
         };
 
         fetch("https://db-projecto.vercel.app/nuevo", {

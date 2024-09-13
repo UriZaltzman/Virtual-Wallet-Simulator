@@ -74,14 +74,21 @@ button:hover{
     transform: scale(1.05);
 }
 
-span{
-    position: relative;
-    left: 11px;
-    top:5px;
-    font-size: 20px;
-}
-
 i, span {
     margin-bottom: 4px;
 } 
 
+.toggle-visibility {
+    position: relative;
+    display: flex;
+    margin-top: 1.5px;
+    margin-bottom: 1.2px;
+    right: 40px; 
+    cursor: pointer;
+}
+
+.lock-up{
+    position: relative;
+    display: flex;
+    bottom: 62px;
+}
