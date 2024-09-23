@@ -2,15 +2,15 @@ document.addEventListener("DOMContentLoaded", function() {
     const buttonRegistrar = document.getElementById("buttonRegistrar");
 
     buttonRegistrar.addEventListener("click", function(event) {
-        event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
+        event.preventDefault(); 
 
         const nombre = document.getElementById("nombre").value;
         const apellido = document.getElementById("apellido").value;
-        const DNI = document.getElementById("DNI").value;
-        const direccion = document.getElementById("direccion").value;
         const email = document.getElementById("email").value;
-        const contrasena = document.getElementById("contrasena").value;
-
+        const contrasena = document.getElementById("hashedPassword").value;
+        const direccion = document.getElementById("direccion").value;
+        const DNI = document.getElementById("DNI").value;
+        
         if (!nombre || !apellido || !email || !contrasena || !DNI || !direccion) {
             alert("Por favor, completa todos los campos.");
             return;
@@ -20,9 +20,9 @@ document.addEventListener("DOMContentLoaded", function() {
             nombre: nombre,
             apellido: apellido,
             email: email,
-            contrasena: contrasena,
-            DNI: DNI,
+            contrasena: hashedPassword,
             direccion: direccion, 
+            DNI: DNI,
         };
 
         fetch("https://db-projecto.vercel.app/nuevo", {
