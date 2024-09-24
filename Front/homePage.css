@@ -51,6 +51,7 @@ body{
 .rectangleMonto {
     display: flex;
     position: relative;
+    top:20px;
     align-items: center;
     justify-content: center;
     width: 90%;
@@ -60,12 +61,12 @@ body{
 }
 
 .monto {
-    display: flex   ;
+    display: flex;
     text-align: center;
     font-weight: bold;
     font-size: 45px;
     color: #000;
-    margin-top: 50px;
+    margin-top: 63px;
     margin-left: 15px;
 }
 
@@ -125,8 +126,6 @@ body{
 
 .buttons {
     display: flex;
-    justify-content: space-evenly; 
-    width: 100%;
 }
 
 .cargar_sube,
@@ -137,10 +136,11 @@ body{
     align-items: center;
     width: 55px;
     height: 55px;
-    background-color: #fff;
+    background-color: #000;
     border: none;
     border-radius: 50%;
     font-size: 12px;
+    margin: 5px;
 }
 
 .cargar_sube img {
@@ -158,14 +158,32 @@ body{
 .cargar_datos a,
 .pagar_impuestos a {
     text-decoration: none;
-    color: #000;  
+    color: #fff;  
 }
 
 .pagar_impuestos i{
     font-size: 40px;
 }
 
+.cargar_sube i{
+    font-size: 40px;
+}
+
 .cargar_datos i{
     font-size: 40px;
 }  
+
+.btnRectangle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 160px;
+    background-color:#fff;  
+    border-radius: 15px;
+    position:relative;
+    bottom: 50px;
+}
+
 
