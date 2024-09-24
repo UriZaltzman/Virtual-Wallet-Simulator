@@ -19,10 +19,10 @@ document.addEventListener("DOMContentLoaded", function() {
         const infoPersona = {
             nombre: nombre,
             apellido: apellido,
-            email: email,
+            mail: email,
             contrasena: hashedPassword,
             direccion: direccion, 
-            DNI: DNI,
+            dni: DNI,
         };
 
         fetch("https://db-projecto.vercel.app/nuevo", {
