@@ -179,11 +179,23 @@ body{
     align-items: center;
     justify-content: center;
     width: 90%;
-    height: 160px;
     background-color:#fff;  
     border-radius: 15px;
     position:relative;
-    bottom: 50px;
+    bottom: 80px;
+}
+
+.movementsRectangle{
+    position: relative;
+    bottom: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    background-color:#fff;  
+    border-radius: 15px;
+    height: 160px;
 }
 
 

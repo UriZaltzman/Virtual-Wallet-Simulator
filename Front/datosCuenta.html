@@ -1,80 +1,27 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Document</title>
-</head>
-<body>
-    <div class="container">
-        <p>CVU:</p><label for="CVU">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</label>
-        <p>Alias:</p><label id="alias" for="alias">alias.prueba.wtic</label><i class="bx bx-pencil" id="pencilIcon"></i>
-    </div>
-
-    <script>
-        const changeAlias = document.getElementById("alias")
-        const pencilIcon = document.getElementById("pencilIcon")
-
-    </script>
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="datosCuenta.css">
     <title>Document</title>
-    <style>
-        .guardar-btn {
-            display: none; /* Ocultamos el botón inicialmente */
-            margin-left: 10px;
-        }
-        .alias-input {
-            display: none; /* Ocultamos el input inicialmente */
-            margin-left: 10px;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
-        <p>CVU:</p><label for="CVU">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</label>
-        <p>Alias:</p>
-        <label id="alias" for="alias">alias.prueba.wtic</label>
-        <i class="bx bx-pencil" id="pencilIcon"></i> <!-- Ícono del lápiz -->
-        <input type="text" id="aliasInput" class="alias-input"> <!-- Input oculto -->
-        <button id="guardarAlias" class="guardar-btn">Guardar</button> <!-- Botón oculto -->
+        <h3>Comparte tus datos de la cuenta!</h3>
+        <p class="CVU">CVU:</p><label for="CVU" id="CVU" class="lblCVU">000000000000000</label>
+        <i class='bx bxs-copy-alt' id="copyIcon"></i>
+        <p class="Alias">Alias:</p><label id="alias" for="alias">alias.prueba.wtic</label>
+        <i class="bx bx-pencil" id="pencilIcon"></i> 
+        <input type="text" id="aliasInput" class="alias-input"> 
+       <br><button id="guardarAlias" class="guardar-btn">Guardar</button>       
+        <a href="homePage.html">   
+            <button class="btnVolver" id="btnVolver">Volver a la Home</button>
+        </a>
     </div>
 
-    <script>
-        const aliasLabel = document.getElementById("alias");
-        const aliasInput = document.getElementById("aliasInput");
-        const pencilIcon = document.getElementById("pencilIcon");
-        const guardarBtn = document.getElementById("guardarAlias");
+    <script src="datosCuenta.js"></script>
 
-        // Al hacer clic en el ícono del lápiz
-        pencilIcon.addEventListener("click", function() {
-            // Mostrar el input y el botón de guardar, ocultar el label de alias
-            aliasInput.style.display = "inline";
-            guardarBtn.style.display = "inline";
-            aliasLabel.style.display = "none";
-            
-            // Pasar el valor actual del alias al campo de texto
-            aliasInput.value = aliasLabel.textContent;
-        });
-
-        // Al hacer clic en el botón de guardar
-        guardarBtn.addEventListener("click", function() {
-            // Asignar el valor del input al aliasLabel
-            aliasLabel.textContent = aliasInput.value;
-
-            // Ocultar el input y el botón de guardar, mostrar el label de alias
-            aliasInput.style.display = "none";
-            guardarBtn.style.display = "none";
-            aliasLabel.style.display = "inline";
-        });
-    </script>
 </body>
 </html>

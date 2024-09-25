@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: #000;
+    height: 100vh;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.container {
+    width: 350px;
+    background-color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px /* #39ff14 */ #fff;
+}
+
+
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    color: /*# 39ff14 */ #fff;
+    margin-bottom: 5px;
+}
+
+.CVU{
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.lblCVU {
+    margin-bottom: 20px;
+}
+
+.Alias{
+    margin-top:10px;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.guardar-btn {
+    display: none; /* Ocultamos el botón inicialmente */
+    margin-top: 10px;
+    margin-left: 95px;
+    padding: 5px 30px;
+    border: none;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+}
+
+#pencilIcon {
+    position: relative;
+    top: 2px;
+    margin-left: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+i{
+    cursor: pointer;
+}
+
+.alias-input {
+    display: none; /* Ocultamos el input inicialmente */
+    margin-left: 10px;
+    width: 90%;
+    position: relative;
+    border-radius: 5px;
+}
+
+.btnVolver {
+    margin-top: 20px;
+    margin-left: 90px;
+    width: 40%;
+    border-radius:10px ;
+    height: 25px;
+}
