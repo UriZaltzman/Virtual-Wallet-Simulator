@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="cargarSube1.css">
+    <title>Document</title>
+    <style>
+        .progress-container {
+            width: 100%;
+            background-color: #f3f3f3;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .progress-bar {
+            width: 0%;
+            height: 30px;
+            background-color: #4caf50;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Cargar Tarjeta Sube</h2>
+        <p>Presione pagar si lo desea</p>
+        <div class="montos">
+              <label for="#">$1000</label>
+              <button id="btnPagar">Pagar la carga de tu sube</button>
+        </div>
+        <div class="progress-container" id="progressContainer">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <a href="/Front/cargarSube.html" class="aHome">
+            <button class="btnHome"><i class='bx bx-exit bx-rotate-180' ></i></button>
+        </a>
+    </div>
+
+    <script>
+        const btnPagar = document.getElementById("btnPagar");
+        const progressBar = document.getElementById("progressBar");
+        const progressContainer = document.getElementById("progressContainer");
+
+        btnPagar.addEventListener("click", function() {
+            progressContainer.style.display = "block";
+
+            let width = 0;
+            const interval = setInterval(function() {
+                if (width >= 100) {
+                    clearInterval(interval);
+                    alert("¡El pago de $1000 ha sido procesado exitosamente!");
+                    return window.location.href = "/Front/homePage.html";
+                } else {
+                    width++;
+                    progressBar.style.width = width + '%';
+                }
+            }, 40) ; // La velocidad de la animación puede ajustarse
+        });
+
+    </script>
+</body>
+</html>
