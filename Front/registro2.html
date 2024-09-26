@@ -15,7 +15,7 @@
             <input type="text" placeholder="Ingresa tu nombre" id="nombre" minlength="3" maxlength="30"><i class='bx bxs-user'></i>
             <input type="text" placeholder="Ingresa tu apellido" id="apellido" minlength="1" maxlength="20"><i class='bx bxs-user'></i>
             <input type="email" placeholder="Ingresa tu correo electronico" id="email" ><i class='bx bxl-gmail'></i>
-            <input type="password" placeholder="Ingresa tu contraseña" id="hashedPassword" id="passwordId"><i class='bx bx-low-vision toggle-visibility' id="passIconId" onclick="showPass()"></i><i class='bx bxs-lock-alt lock-up'></i>
+            <input type="password" placeholder="Ingresa tu contraseña" id="hashedPassword"><i class='bx bx-low-vision toggle-visibility' id="passIconId" onclick="showPass()"></i><i class='bx bxs-lock-alt lock-up'></i>
             <input type="number" placeholder="Ingresa tu DNI" id="DNI" minlength="7" ><i class='bx bxs-id-card'></i>
             <input type="text" placeholder="Ingresa tu direccion" id="direccion" ><i class='bx bxs-location-plus'></i>
         </div>
@@ -26,18 +26,17 @@
 
     <script>
         function showPass() {
-            var passwordField = document.getElementById("passwordId");
-            var icon = document.getElementById("passIconId");
+            const passwordField = document.getElementById("hashedPassword");
+            const icon = document.getElementById("passIconId");
 
-            // Alternar entre mostrar y ocultar la contraseña
             if (passwordField.type === "password") {
-                passwordField.type = "text"; // Mostrar la contraseña
+                passwordField.type = "text"; 
                 icon.classList.remove('bx-low-vision');
-                icon.classList.add('bx-show-alt'); // Cambia el ícono a uno de ojo
+                icon.classList.add('bx-show-alt'); 
             } else {
-                passwordField.type = "password"; // Ocultar la contraseña
+                passwordField.type = "password"; 
                 icon.classList.remove('bx-show-alt');
-                icon.classList.add('bx-low-vision'); // Cambia el ícono de vuelta a "low-vision"
+                icon.classList.add('bx-low-vision');
             }
         }
     </script>

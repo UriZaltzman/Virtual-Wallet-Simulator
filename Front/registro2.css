@@ -80,9 +80,8 @@ i, span {
 
 .toggle-visibility {
     position: relative;
+    bottom:20px;
     display: flex;
-    margin-top: 1.5px;
-    margin-bottom: 1.2px;
     right: 40px; 
     cursor: pointer;
 }
@@ -90,5 +89,9 @@ i, span {
 .lock-up{
     position: relative;
     display: flex;
-    bottom: 62px;
+    bottom: 45px;
+}
+
+#hashedPassword {
+    margin-bottom: -11px;
 }
