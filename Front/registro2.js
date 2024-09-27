@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const nombre = document.getElementById("nombre").value;
         const apellido = document.getElementById("apellido").value;
         const email = document.getElementById("email").value;
-        const contrasena = document.getElementById("hashedPassword").value;
+        const contrasena = document.getElementById("contrasena").value;
         const direccion = document.getElementById("direccion").value;
         const DNI = document.getElementById("DNI").value;
         
@@ -20,13 +20,14 @@ document.addEventListener("DOMContentLoaded", function() {
             nombre: nombre,
             apellido: apellido,
             mail: email,
-            contrasena: hashedPassword,
+            contrasena: contrasena,
             direccion: direccion, 
             dni: DNI,
         };
 
-        fetch("https://db-projecto.vercel.app/nuevo", {
+        fetch("https://db-projecto.vercel.app/nuevo", {  //https://db-projecto.vercel.app/nuevo// //http://localhost:3000/nuevo//
             method: 'POST',
+             mode: 'no-cors',
             headers: {
                 "Content-Type": "application/json"
             },
@@ -42,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
             alert("Registro exitoso");
         })
         .catch(error => {
-            console.error("Error:", error);
+            console.log(error);
             alert("Hubo un problema con el registro");
         });
     });
