@@ -25,9 +25,11 @@ document.addEventListener("DOMContentLoaded", function() {
             dni: DNI,
         };
 
-        fetch("https://db-projecto.vercel.app/nuevo", {  //https://db-projecto.vercel.app/nuevo// //http://localhost:3000/nuevo//
+
+        //https://db-projecto.vercel.app/nuevo// //http://localhost:3000/nuevo//
+
+        fetch("http://localhost:3000/nuevo", {  
             method: 'POST',
-             mode: 'no-cors',
             headers: {
                 "Content-Type": "application/json"
             },

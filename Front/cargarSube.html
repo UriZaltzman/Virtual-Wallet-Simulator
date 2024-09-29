@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="cargarSube.css">
-    <title>Document</title>
+    <title>Cargar Tarjeta Sube</title>
 </head>
 <body>
     <div class="container">
         <h2>Cargar Tarjeta Sube</h2>
+
+        <p id="numeroSube" style="font-weight: bold; font-size: 15px; border-bottom: 2px solid #8b8b8ba1;"></p>
+
         <p>Elige tu monto</p>
         <div class="montos">
             <a href="cargarSube HTML/cargarSube1.html">
@@ -28,9 +31,23 @@
                 <button>$5000</button>
             </a>
         </div>
-        <a href="homePage.html" class="aHome">
+        <a href="queTarjeta.html" class="aHome">
             <button class="btnHome"><i class='bx bx-exit bx-rotate-180' ></i></button>
         </a>
     </div>
+
+    <script>
+       
+        const numeroSube = localStorage.getItem("numeroSube");
+
+       
+        if (numeroSube) {
+            
+            document.getElementById("numeroSube").textContent = "Número de SUBE: " + numeroSube;
+        } else {
+            
+            document.getElementById("numeroSube").textContent = "No se ha ingresado ningún número de SUBE.";
+        }
+    </script>
 </body>
 </html>
