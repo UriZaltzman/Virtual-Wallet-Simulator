@@ -37,16 +37,12 @@
     </div>
 
     <script>
-       
-        const numeroSube = localStorage.getItem("numeroSube");
+        const tarjetaSeleccionada = localStorage.getItem("tarjetaSeleccionada");
 
-       
-        if (numeroSube) {
-            tarjetaSeleccionada.style.display = "none"
-            document.getElementById("numeroSube").textContent = "Número de SUBE: " + numeroSube;
+        if (tarjetaSeleccionada) {
+            document.getElementById("numeroSube").textContent = "Número de SUBE: " + tarjetaSeleccionada;
         } else {
-            
-            document.getElementById("numeroSube").textContent = "No se ha ingresado ningún número de SUBE.";
+            document.getElementById("numeroSube").textContent = "No se ha seleccionado ningún número de SUBE.";
         }
     </script>
 </body>

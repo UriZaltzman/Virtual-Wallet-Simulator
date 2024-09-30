@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .then(data => {
             alert("Registro exitoso");
+            return window.location.href = "./login.html";
         })
         .catch(error => {
             console.log(error);
