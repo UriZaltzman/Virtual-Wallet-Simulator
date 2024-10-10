@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         //https://db-projecto.vercel.app/nuevo// //http://localhost:3000/nuevo//
 
-        fetch("http://localhost:3000/nuevo", {  
+        fetch("https://vercel.live/link/db-projecto.vercel.app?via=project-dashboard-alias-list&p=1/nuevo", {  
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"

@@ -7,13 +7,13 @@ document.getElementById('button').addEventListener('click',async ()=> {
         contasena:password
     }
 
-    const response = await fetch('http://localhost:3000/login', { //https://db-projecto.vercel.app
+    const response = await fetch('https://vercel.live/link/db-projecto.vercel.app?via=project-dashboard-alias-list&p=1/login', { //https://db-projecto.vercel.app //https://vercel.live/link/db-projecto.vercel.app?via=project-dashboard-alias-list&p=1
         method: 'POST',
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify(infoPersona),
-    })
+    })  
     .then(response => {
         if (!response.ok) {
             throw new Error("Error en el login");

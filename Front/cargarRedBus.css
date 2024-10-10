@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background: #000;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.container {
+    width: 350px;
+    background-color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p{
+    margin-top:10px;
+    margin-bottom: 5px;    
+}
+
+.montos{
+    width: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    align-items: center;
+}
+
+.montos button{
+    font-size: 20px;
+    padding: 0 80px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.montos button:hover{
+    color: #005ec9;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover{
+    color: #ffff10;
+    cursor: pointer;
+}
+
+.btnHome{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 100%;
+}
+
+.btnHome i{
+    font-size: 24px;
+}
+
+.aHome{
+    margin-top: 5px;
+    margin-right: 240px;
+}
+
+a:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.btnHome:hover{
+    cursor: pointer;
+}
+
+.btnHome i:hover{
+    color: #005ec9;
+}
