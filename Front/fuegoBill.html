@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagar el Agua</title>
+    <link rel="stylesheet" href="fuegoBill.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <h2>Pagar el gas</h2>
+        <button id="btnAdd">Ingresar número de Impuesto</button>
+        <div id="inputSection" style="display: none;">
+            <input type="text" placeholder="Nro de Impuesto" maxlength="15" id="inputNro">
+            <button id="btnContinuar">Continuar</button> 
+        </div>
+        <label for="" id="lblNro" style="display: none;"></label>
+        <div class="montos">
+            <button id="btnPagar" style="display: none;">
+                <span>Pagar Impuesto</span>
+                <div id="progress-bar" class="progress-bar" style="display: none;"></div>
+            </button>            
+        </div>
+        <a href="addBill.html" class="aHome">
+            <button class="btnHome"><i class='bx bx-exit bx-rotate-180'></i></button>
+        </a>
+    </div>
+    <script src="fuegoBill.js"></script>
+</body>
+</html>
