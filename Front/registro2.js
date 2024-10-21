@@ -28,8 +28,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
         //https://db-projecto.vercel.app/nuevo// //http://localhost:3000/nuevo//
 
-        fetch("https://vercel.live/link/db-projecto.vercel.app?via=project-dashboard-alias-list&p=1/nuevo", {  
+        fetch("https://db-projecto-knq89bgas-pablo-vives-projects.vercel.app/nuevo", {  
             method: 'POST',
+            mode: "cors",
             headers: {
                 "Content-Type": "application/json"
             },

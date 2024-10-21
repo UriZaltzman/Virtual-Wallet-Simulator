@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: #000;
+    height: 100vh;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.container {
+    width: 350px;
+    background-color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px /* #39ff14 */ #fff;
+}
+
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    color: /*# 39ff14 */ #fff;
+}
+
+h4 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: /*# 39ff14 */ #fff;
+}
+
+.btnAdd button {
+    margin-top: 10px;
+    margin-left: 60px;
+    width: 60%;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    background-color: #fff;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    align-items: center;
+}
+
+.btnHome {
+    padding: 10px;
+    border: none;
+    border-radius: 100%;
+}
+
+.btnHome i{
+    font-size: 24px;
+}
+
+.aHome{
+    margin-bottom: 40px;
+    margin-right: 240px;
+}
+
+a:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.btnHome:hover{
+    cursor: pointer;
+}
+
+.btnHome i:hover{
+    color: #005ec9;
+}
