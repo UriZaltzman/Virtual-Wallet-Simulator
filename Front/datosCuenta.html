@@ -10,15 +10,21 @@
 <body>
     <div class="container">
         <h3>Comparte tus datos de la cuenta!</h3>
-        <p class="CVU">CVU:</p><label for="CVU" id="CVU" class="lblCVU">000000000000000</label>
-        <i class='bx bxs-copy-alt' id="copyIcon"></i>
-        <p class="Alias">Alias:</p><label id="alias" for="alias">alias.prueba.wtic</label>
-        <i class="bx bx-pencil" id="pencilIcon"></i> 
-        <input type="text" id="aliasInput" class="alias-input"> 
-       <br><button id="guardarAlias" class="guardar-btn">Guardar</button>       
-        <a href="homePage.html">   
-            <button class="btnVolver" id="btnVolver">Volver a la Home</button>
-        </a>
+        <div class="datosCuenta-container">
+            <div class="cvu">
+                <p class="CVU">CVU:</p><label for="CVU" id="CVU" class="lblCVU">000000000000000</label>
+                <i class='bx bxs-copy-alt' id="copyIcon"></i>
+            </div>
+            <div class="alias">
+                <p class="Alias">Alias:</p><label id="alias" for="alias">alias.prueba.wtic</label>
+                <i class="bx bx-pencil" id="pencilIcon"></i> 
+                <input type="text" id="aliasInput" class="alias-input"> 
+                <br><button id="guardarAlias" class="guardar-btn">Guardar</button>   
+            </div>  
+        </div>  
+       <a href="homePage.html" class="aHome">
+        <button class="btnHome"><i class='bx bx-exit bx-rotate-180'></i></button>
+    </a>
     </div>
 
     <script src="datosCuenta.js"></script>

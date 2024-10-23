@@ -37,7 +37,7 @@ body{
 
 .iconsUp i {
     font-size: 50px;
-    color: #fff; 
+    color: #005ec9;
     cursor: pointer;
 }
 
@@ -45,7 +45,7 @@ body{
     display: flex;
 }
 .iconsUp a :hover{
-    color: #14d0ff;
+    cursor: pointer;
 }
 
 .buttonsContainer {
@@ -86,25 +86,22 @@ button {
     align-items: center;
     margin-bottom: 15px;
     margin-top: 20px;
+    font-weight: bold;
 }
 
-/* Estilos para el rectángulo verde alrededor de los botones */
 .buttonsContainer button {
     background-color: #fff;
-    color: #000;
+    color: #005ec9;
     border-radius: 20px;
 }
 
-/* Estilos para el botón dentro del rectángulo verde */
 .buttonsContainer button:hover {
-    background-color: #14d0ff;
-    transform: scale(1.05);
     cursor: pointer;
 }
 
 .infoPersona i{
     font-size: 20px;
-    color: black;
+    color: #005ec9;
     background-color: transparent;
     margin-left: 10px;
     margin-bottom: 1.5px;
@@ -112,7 +109,7 @@ button {
 
 .datosCuenta i{
     font-size: 20px;
-    color: black;
+    color: #005ec9;
     background-color: transparent;
     margin-left: 10px;
     margin-bottom: 1.5px;
@@ -120,7 +117,7 @@ button {
 
 .seguridad i{
     font-size: 20px;
-    color: black;
+    color: #005ec9;
     background-color: transparent;
     margin-left: 10px;
     margin-bottom: 1.5px;
@@ -128,7 +125,7 @@ button {
 
 .nivelCuenta i{
     font-size: 20px;
-    color: black;
+    color: #005ec9;
     background-color: transparent;
     margin-left: 10px;
     margin-bottom: 1.5px;

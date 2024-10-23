@@ -49,7 +49,7 @@ h3 {
 }
 
 .guardar-btn {
-    display: none; /* Ocultamos el botón inicialmente */
+    display: none;
     margin-top: 10px;
     margin-left: 95px;
     padding: 5px 30px;
@@ -57,12 +57,11 @@ h3 {
     background-color: #fff;
     color: #000;
     border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 #pencilIcon {
-    position: relative;
-    top: 2px;
-    margin-left: 10px;
     font-size: 15px;
     cursor: pointer;
 }
@@ -77,12 +76,40 @@ i{
     width: 90%;
     position: relative;
     border-radius: 5px;
+    height: 30px;
+    font-size: 16px;
 }
 
-.btnVolver {
-    margin-top: 20px;
-    margin-left: 90px;
-    width: 40%;
-    border-radius:10px ;
-    height: 25px;
+.btnHome{
+    margin-top: 12px;
+    padding: 10px;
+    border: none;
+    border-radius: 100%;
+}
+
+.btnHome i{
+    font-size: 24px;
+}
+
+.aHome{
+    margin-top: 5px;
+    margin-right: 240px;
+}
+
+a:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.btnHome:hover{
+    cursor: pointer;
+}
+
+.btnHome i:hover{
+    color: #005ec9;
+}
+
+.alias, .cvu {
+    font-weight: bold;
+    font-size: 16px;
 }
