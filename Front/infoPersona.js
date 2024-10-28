@@ -1,0 +1,1 @@
+const idUsuario = document.getElementByIdU("idUsuario");
