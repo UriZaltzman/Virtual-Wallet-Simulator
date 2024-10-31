@@ -7,7 +7,7 @@ document.getElementById('button').addEventListener('click',async ()=> {
         contasena:password
     }
 
-    const response = await fetch('https://vercel.live/link/db-projecto.vercel.app?via=project-dashboard-alias-list&p=1/login', { //https://db-projecto.vercel.app //https://vercel.live/link/db-projecto.vercel.app?via=project-dashboard-alias-list&p=1
+    const response = await fetch('http://localhost:3000/login', { //https://db-projecto.vercel.app //https://vercel.live/link/db-projecto.vercel.app?via=project-dashboard-alias-list&p=1
         method: 'POST',
         headers: {
             "Content-Type": "application/json"
