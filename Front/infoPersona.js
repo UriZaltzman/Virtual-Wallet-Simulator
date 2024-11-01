@@ -1,5 +1,3 @@
-const idUsuario = document.getElementByIdU("idUsuario");
-
 document.addEventListener("DOMContentLoaded", function() {
     // Llamada al endpoint para obtener información del usuario
     fetch("https://db-projecto.vercel.app/infoPersona", {  // Cambia la URL si tu endpoint es diferente
@@ -18,10 +16,9 @@ document.addEventListener("DOMContentLoaded", function() {
         // Seleccionamos el elemento donde mostraremos los datos
         const idUsuarioLabel = document.getElementById("idUsuario");
 
-        // Insertamos los datos en el DOM (nombre y apellido)
         if (data.length > 0) {
             const { nombre, apellido } = data[0];
-            idUsuarioLabel.textContent = `Nombre: ${nombre} ${apellido}`;
+            idUsuarioLabel.textContent = `${nombre} ${apellido}`;
         } else {
             idUsuarioLabel.textContent = "No se encontró información del usuario.";
         }
