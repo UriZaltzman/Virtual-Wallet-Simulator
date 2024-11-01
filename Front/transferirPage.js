@@ -14,7 +14,12 @@ searchInput.addEventListener("input", e => {
   })
 })
 
-fetch("https://jsonplaceholder.typicode.com/users")
+fetch("https://db-projecto.vercel.app/filtro", {
+    method: 'GET',
+    headers: {
+        "Content-Type": "application/json"
+    }
+})
   .then(res => res.json())
   .then(data => {
     users = data.map(user => {
