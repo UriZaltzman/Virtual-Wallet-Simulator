@@ -4,10 +4,10 @@ document.getElementById('button').addEventListener('click',async ()=> {
 
     infoPersona={
         mail:email,
-        contasena:password
+        contrasena:password
     }
 
-    const response = await fetch('http://localhost:3000/login', { //https://db-projecto.vercel.app //https://vercel.live/link/db-projecto.vercel.app?via=project-dashboard-alias-list&p=1
+    const response = fetch('https://db-projecto.vercel.app/login', { //https://db-projecto.vercel.app //https://vercel.live/link/db-projecto.vercel.app?via=project-dashboard-alias-list&p=1
         method: 'POST',
         headers: {
             "Content-Type": "application/json"
