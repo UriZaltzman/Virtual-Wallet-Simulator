@@ -1,54 +1,54 @@
-const aliasLabel = document.getElementById("alias");
-const aliasInput = document.getElementById("aliasInput");
-const pencilIcon = document.getElementById("pencilIcon");
-const guardarBtn = document.getElementById("guardarAlias");
-const btnVolver = document.getElementById("btnVolver");
+document.addEventListener("DOMContentLoaded", function() {
+    const token = localStorage.getItem('authToken'); 
+    
+    const mailElement = document.getElementById("mail");
+    const nomCompletoElement = document.getElementById("nomCompleto");
+    const copyIcon = document.getElementById("copyIcon");
+    const btnCompartir = document.getElementById("btnCompartir");
 
-pencilIcon.addEventListener("click", function() {
-    
-    aliasInput.style.display = "inline";
-    guardarBtn.style.display = "inline";
-    aliasLabel.style.display = "none";
-    pencilIcon.style.display = "none";
-    btnVolver.style.display = "none";
-    
-    aliasInput.value = aliasLabel.textContent;
-});
 
-guardarBtn.addEventListener("click", function() {
-    aliasLabel.textContent = aliasInput.value;
+    btnCompartir.addEventListener("click", function() {
+        if (nomCompletoElement.textContent && mailElement.textContent) {
+            const textoACopiar = `¡Te comparto mis datos!\nNombre Completo: ${nomCompletoElement.textContent}\nEmail: ${mailElement.textContent}`;
     
-    try {
-        const aliasValue = aliasInput;
-        if (!aliasInput.value) {
-            alert("Por favor, ingrese un alias"); 
-            return;
-        }else{
-            alert("Ha ingresado con éxito el Alias");
+            navigator.clipboard.writeText(textoACopiar)
+                .then(() => alert("Datos copiados, puede compatirlos tranquilo!"))
+                .catch(error => console.error("Error al copiar al portapapeles:", error));
+        } else {
+            alert("No hay datos completos para copiar.");
         }
-    }
-    catch(error){
-        console.log(error);
-        res.status(500).json("El alias esta mal")
-    }
+    });
+    
 
-    aliasInput.style.display = "none";
-    guardarBtn.style.display = "none";
-    aliasLabel.style.display = "inline";
-    pencilIcon.style.display = "inline";
-    btnVolver.style.display = "inline";
+    fetch("https://db-projecto.vercel.app/compartir", {
+        method: 'GET',
+        headers: {
+            "Authorization": `Bearer ${token}`,
+            "Content-Type": "application/json"
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Error al obtener la información del usuario");
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log(data);
+        
+       
+        if (data && data.length > 0) {
+            const { nombre, apellido, mail } = data[0];
+            
+
+            nomCompletoElement.textContent = `${nombre} ${apellido}`;
+            mailElement.textContent = mail;
+        } else {
+            alert("No se encontró información del usuario.");
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        alert("Hubo un problema al obtener la información del usuario.");
+    });
 });
-
-const copyIcon = document.getElementById("copyIcon");
-const CVUvalue = document.getElementById("CVU");
-  
-copyIcon.addEventListener("click", function(){
-    navigator.clipboard.writeText(CVUvalue.textContent);
-
-    try {
-        alert("Se ha copiado el CVU");   
-    } catch (error) {
-        console.log(error);
-        res.status(500).json("Ha habido un error, intentalo más tarde");
-    }
-})

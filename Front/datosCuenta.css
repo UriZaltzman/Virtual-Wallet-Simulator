@@ -35,7 +35,8 @@ h3 {
 
 .CVU{
     font-size: 16px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    text-decoration: underline;
 }
 
 .lblCVU {
@@ -43,41 +44,14 @@ h3 {
 }
 
 .Alias{
-    margin-top:10px;
-    margin-bottom: 5px;
+    margin-top:15px;
+    margin-bottom: 10px;
     font-size: 16px;
-}
-
-.guardar-btn {
-    display: none;
-    margin-top: 10px;
-    margin-left: 95px;
-    padding: 5px 30px;
-    border: none;
-    background-color: #fff;
-    color: #000;
-    border-radius: 10px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-#pencilIcon {
-    font-size: 15px;
-    cursor: pointer;
+    text-decoration: underline;
 }
 
 i{
     cursor: pointer;
-}
-
-.alias-input {
-    display: none; /* Ocultamos el input inicialmente */
-    margin-left: 10px;
-    width: 90%;
-    position: relative;
-    border-radius: 5px;
-    height: 30px;
-    font-size: 16px;
 }
 
 .btnHome{
@@ -112,4 +86,16 @@ a:hover{
 .alias, .cvu {
     font-weight: bold;
     font-size: 16px;
+}
+
+.btnCompartir {
+    position: relative;
+    top: 53.5px;
+    left: 70px;
+    height: 40px;
+    width: 240px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
 }
