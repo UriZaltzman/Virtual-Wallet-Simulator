@@ -78,3 +78,34 @@ input[type="search"] {
 .hide {
     display: none;
 }
+
+
+.btnHome{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 100%;
+    margin-top: 5px;
+}
+
+.btnHome i{
+    font-size: 24px;
+}
+
+.aHome{
+    margin-top: 5px;
+    margin-right: 240px;
+}
+
+a:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.btnHome:hover{
+    cursor: pointer;
+}
+
+.btnHome i:hover{
+    color: #005ec9;
+}

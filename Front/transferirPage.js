@@ -1,60 +1,66 @@
-const userCardTemplate = document.querySelector("[data-user-template]")
-const userCardContainer = document.querySelector("[data-user-cards-container]")
-const searchInput = document.querySelector("[data-search]")
+document.addEventListener("DOMContentLoaded", function() {
+  const searchInput = document.querySelector("[data-search]");
+  const userCardTemplate = document.querySelector("[data-user-template]");
+  const userCardContainer = document.querySelector("[data-user-cards-container]");
 
-let users = []
+  let users = [];
 
-searchInput.addEventListener("input", e => {
-  const value = e.target.value.toLowerCase()
-  users.forEach(user => {
-    const isVisible =
-      user.name.toLowerCase().includes(value) ||
-      user.email.toLowerCase().includes(value)
-    user.element.classList.toggle("hide", !isVisible)
-  })
-})
-/* 
-fetch("http://localhost:3000/filtro", { //https://db-projecto.vercel.app
-    method: 'GET',
-    headers: {
-        "Content-Type": "application/json"
-    }
-})
-  .then(res => res.json())
-  .then(data => {
-    users = data.map(user => {
-      const card = userCardTemplate.content.cloneNode(true).children[0]
-      const header = card.querySelector("[data-header]")
-      const body = card.querySelector("[data-body]")
-      header.textContent = user.name
-      body.textContent = user.email
-      userCardContainer.append(card)
-      return { name: user.name, email: user.email, element: card }
-    })
-  })
- */
+  // Función para renderizar las tarjetas de usuario
+  function renderUserCards(usersToRender) {
+      userCardContainer.innerHTML = "";  // Limpiar contenedor antes de renderizar
+      usersToRender.forEach(user => {
+          const card = userCardTemplate.content.cloneNode(true).children[0];
+          const header = card.querySelector("[data-header]");
+          const body = card.querySelector("[data-body]");
 
-fetch("http://localhost:3000/filtro", {
-  method: 'GET',
-  headers: {
-      "Content-Type": "application/json"
-   }
-})
-  .then(res => res.json())
-  .then(data => {
-    console.log(data);
-    if (Array.isArray(data)) {
-      users = data.map(user => {
-        const card = userCardTemplate.content.cloneNode(true).children[0];
-        const header = card.querySelector("[data-header]");
-        const body = card.querySelector("[data-body]");
-        header.textContent = user.name;
-        body.textContent = user.email;
-        userCardContainer.append(card);
-        return { name: user.name, email: user.email, element: card };
+          header.textContent = `${user.nombre} ${user.apellido}`;
+          body.textContent = user.email;
+
+          userCardContainer.append(card);  // Agregar tarjeta al contenedor
+          user.element = card;  // Guardar referencia de la tarjeta para filtrado
       });
-    } else {
-      console.error("La respuesta no es un array:", data);
-    }
+  }
+
+  // Solicitud inicial para obtener todas las cuentas
+  fetch("https://db-projecto.vercel.app/filtro", {
+      method: 'GET',
+      headers: {
+          "Content-Type": "application/json"
+      }
+  })
+  .then(response => {
+      if (!response.ok) {
+          throw new Error("Error al obtener la información de los usuarios");
+      }
+      return response.json();
+  })
+  .then(data => {
+      if (data.success && data.results) {
+          users = data.results.map(user => ({
+              nombre: user.nombre,
+              apellido: user.apellido,
+              email: user.mail,
+              element: null
+          }));
+
+          // Renderizar todas las tarjetas inicialmente
+          renderUserCards(users);
+      } else {
+          console.error("Error en la respuesta:", data.message);
+          userCardContainer.innerHTML = "<p>No se encontró una cuenta.</p>";
+      }
   })
   .catch(error => console.error("Error en la solicitud:", error));
+
+  // Filtrar en el cliente cuando el usuario escribe
+  searchInput.addEventListener("input", e => {
+      const value = e.target.value.toLowerCase();
+      const filteredUsers = users.filter(user => 
+          user.nombre.toLowerCase().includes(value) ||
+          user.apellido.toLowerCase().includes(value) ||
+          user.email.toLowerCase().includes(value)
+      );
+
+      renderUserCards(filteredUsers);
+  });
+});
