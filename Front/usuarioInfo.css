@@ -25,6 +25,10 @@ body{
     align-items: center;
 }
 
+h3{
+    text-decoration: underline;
+}
+
 .btnCompañias{
     display: flex;
     flex-direction: row;
