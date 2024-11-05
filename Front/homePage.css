@@ -106,7 +106,7 @@ body{
 .btnJuntos {
     position: relative; 
     bottom: 120px; 
-    left: 32.5px; 
+    left: 38px; 
     transform: translateX(-50%); 
     display: flex;
     gap: 10px; 

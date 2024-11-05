@@ -47,6 +47,12 @@ input[type="search"] {
     outline: none;
 }
 
+h2 {
+    position: relative;
+    top: 5px;
+    margin-bottom: 5px;
+}
+
 .user-cards {
     display: grid;
     grid-template-columns: 1fr;
@@ -108,4 +114,13 @@ a:hover{
 
 .btnHome i:hover{
     color: #005ec9;
+}
+
+.card-button {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    display: block;
+    width: 100%; 
 }

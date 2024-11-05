@@ -1,43 +1,38 @@
-document.getElementById('button').addEventListener('click',async ()=> {
+document.getElementById('button').addEventListener('click', async () => {
     const email = document.getElementById('login-email').value;
     const password = document.getElementById('login-password').value;
 
-    infoPersona={
-        mail:email,
-        contrasena:password
-    }
+    const infoPersona = {
+        mail: email,
+        contrasena: password
+    };
 
-    const response = fetch('https://db-projecto.vercel.app/login', { //https://db-projecto.vercel.app //https://vercel.live/link/db-projecto.vercel.app?via=project-dashboard-alias-list&p=1
-        method: 'POST',
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(infoPersona),
-    })  
-    .then(response => {
+    try {
+        const response = await fetch('https://db-projecto.vercel.app/login', {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(infoPersona),
+        });
+
         if (!response.ok) {
             throw new Error("Error en el login");
         }
-        return response.json();
-    })
-    .then(data => {
-        alert("Login exitoso");
-        return window.location.href = "homePage.html";
-    })
-    .catch(error => {
+
+        const data = await response.json();
+
+        if (data.token) {
+            // Guardar el token en localStorage
+            localStorage.setItem('authToken', data.token);
+            alert(data.token);
+            alert("Login exitoso");
+            window.location.href = "homePage.html";
+        } else {
+            alert("Error: No se recibió un token de autenticación.");
+        }
+    } catch (error) {
         console.log(error);
         alert("Hubo un problema con el login");
-    });
-
-    
-
-
-/* 
-    const data = await response.json();
-    alert(data);
-    
-    if (data.success) {
-        window.location.href = '/validate';
-    } */
+    }
 });
-

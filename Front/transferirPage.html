@@ -11,8 +11,11 @@
 <body>
     <div class="container">
         <div class="search-wrapper">
-            <h2>Buscar Usuarios</h2>
-            <input type="search" id="search" data-search>
+          <a href="homePage.html" class="aHome">
+            <button class="btnHome"><i class='bx bx-exit bx-rotate-180'></i></button>
+          </a>
+          <h2>Buscar Usuarios</h2>
+          <input type="search" id="search" data-search>
           </div>
           <div class="user-cards" data-user-cards-container></div>
           <template data-user-template>
@@ -21,9 +24,6 @@
               <div class="body" data-body></div>
             </div>
           </template>
-          <a href="homePage.html" class="aHome">
-            <button class="btnHome"><i class='bx bx-exit bx-rotate-180'></i></button>
-          </a>
         </div>
     </div>
 </body>
