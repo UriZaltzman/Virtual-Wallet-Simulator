@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const token = localStorage.getItem('authToken');  // Asegúrate de que 'authToken' contiene el token
 
-    fetch("http://localhost:3000/usuarioInfo", {
+    fetch("https://db-projecto.vercel.app/usuarioInfo", {
         method: 'GET',
         headers: {
             "Authorization": `Bearer ${token}`,  // Envía el token en el formato correcto

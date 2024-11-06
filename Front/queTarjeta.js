@@ -21,16 +21,33 @@ btnGuardar.addEventListener("click", function() {
         return;
     }
 
-    // Guardar la tarjeta SUBE en localStorage (array de tarjetas)
-    let tarjetasSube = JSON.parse(localStorage.getItem("tarjetasSube")) || [];
-    tarjetasSube.push(subeValue);
-    localStorage.setItem("tarjetasSube", JSON.stringify(tarjetasSube));
+    const token = localStorage.getItem('authToken'); // Obtén el token
 
-    alert("Has ingresado el número de tu Sube con éxito");
-
-    // Resetear input y botones
-    inputSube.value = "";
-    inputSube.style.display = "none";
-    btnGuardar.style.display = "none";
-    addSube.style.display = "inline";
+    fetch("http://localhost:3000/ingresarSube", {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`
+        },
+        body: JSON.stringify({ nroSube: subeValue }) // Asegúrate de enviar como un objeto
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Error al ingresar la Sube");
+        }
+        return response.json();
+    })
+    .then(data => {
+        alert("Has ingresado el número de tu Sube con éxito");
+        inputSube.value = "";
+        inputSube.style.display = "none";
+        btnGuardar.style.display = "none";
+        addSube.style.display = "inline";
+    })
+    .catch(error => {
+        console.error("Hubo un problema con el registro:", error);
+        alert("Hubo un problema con el registro");
+    });
 });
+
+

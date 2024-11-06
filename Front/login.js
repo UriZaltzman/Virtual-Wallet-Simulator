@@ -25,7 +25,7 @@ document.getElementById('button').addEventListener('click', async () => {
         if (data.token) {
             // Guardar el token en localStorage
             localStorage.setItem('authToken', data.token);
-            alert(data.token);
+            console.log(data.token);
             alert("Login exitoso");
             window.location.href = "homePage.html";
         } else {
