@@ -74,7 +74,7 @@ body{
     display: flex;
     position: relative;
     bottom: 190px;
-    left: 70px;
+    left: 50px;
 }
 
 .transeferir_dinero ,
@@ -106,7 +106,7 @@ body{
 .btnJuntos {
     position: relative; 
     bottom: 120px; 
-    left: 38px; 
+    left: 73px; 
     transform: translateX(-50%); 
     display: flex;
     gap: 10px; 

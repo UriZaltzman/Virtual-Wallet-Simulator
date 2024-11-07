@@ -23,7 +23,7 @@ btnGuardar.addEventListener("click", function() {
 
     const token = localStorage.getItem('authToken'); // Obtén el token
 
-    fetch("http://localhost:3000/ingresarSube", {
+    fetch("https://db-projecto.vercel.app/ingresarSube", {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
