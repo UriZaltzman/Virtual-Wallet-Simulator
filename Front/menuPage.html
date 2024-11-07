@@ -41,11 +41,24 @@
                 </a>
             </div>
             <div class="nivelCuenta">
-                <a href="#">
-                    <button class="btn">Cambiar Nivel de Cuenta<i class='bx bx-rotate-left'></i></button>
+                <a href="cerrarSesionpage.html">
+                    <button class="btn">Cerrar Sesión<i class='bx bx-log-out'></i></button>
                 </a>
             </div>
         </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const token = localStorage.getItem('authToken');
+
+                console.log(token);
+
+                if (!token) {
+                    alert("Por favor, inicia sesión para continuar.");
+                    window.location.href = "login.html";
+                };
+            });
+        </script>
     </div>
 </body>
 </html> 
