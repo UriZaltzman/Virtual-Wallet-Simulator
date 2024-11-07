@@ -21,7 +21,7 @@ btnGuardar.addEventListener("click", function() {
         return;
     }
 
-    const token = localStorage.getItem('authToken'); // Obtén el token
+    const token = localStorage.getItem('authToken'); 
 
     fetch("https://db-projecto.vercel.app/ingresarSube", {
         method: 'POST',
@@ -29,7 +29,7 @@ btnGuardar.addEventListener("click", function() {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${token}`
         },
-        body: JSON.stringify({ nroSube: subeValue }) // Asegúrate de enviar como un objeto
+        body: JSON.stringify({ nroSube: subeValue }) 
     })
     .then(response => {
         if (!response.ok) {

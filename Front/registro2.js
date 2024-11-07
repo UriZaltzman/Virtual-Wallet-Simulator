@@ -25,9 +25,6 @@ document.addEventListener("DOMContentLoaded", function() {
             dni: DNI,
         };
 
-
-        //https://db-projecto.vercel.app/nuevo// //http://localhost:3000/nuevo//
-
         fetch("https://db-projecto.vercel.app/nuevo", {  
             method: 'POST',
             headers: {
@@ -52,7 +49,3 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-//npm i cors
-//import cors from "cors"
-//app.use(express.json())
-//app.use(cors)

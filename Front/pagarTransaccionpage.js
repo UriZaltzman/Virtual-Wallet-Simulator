@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         } else {
             let width = 0;
-            let fetchCalled = false; // Flag para asegurar que solo se llame una vez a fetch
+            let fetchCalled = false; 
             const spanText = btnTransferir.querySelector("span");
 
             btnTransferir.disabled = true;

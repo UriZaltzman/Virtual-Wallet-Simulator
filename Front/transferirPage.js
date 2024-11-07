@@ -5,9 +5,8 @@ document.addEventListener("DOMContentLoaded", function() {
   
     let users = [];
   
-    // Función para renderizar las tarjetas de usuario
     function renderUserCards(usersToRender) {
-        userCardContainer.innerHTML = "";  // Limpiar contenedor antes de renderizar
+        userCardContainer.innerHTML = "";  
         usersToRender.forEach(user => {
             
             const cardButton = document.createElement("button");
@@ -21,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function() {
             header.textContent = `${user.nombre} ${user.apellido}`;
             body.textContent = user.email;
   
-            // Añadir la tarjeta al botón y el botón al contenedor
             cardButton.append(card);
             userCardContainer.append(cardButton);
             
@@ -37,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
   
-    // Solicitud inicial para obtener todas las cuentas
     fetch("https://db-projecto.vercel.app/filtro", {
         method: 'GET',
         headers: {
@@ -59,7 +56,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 element: null
             }));
   
-            // Renderizar todas las tarjetas inicialmente
             renderUserCards(users);
         } else {
             console.error("Error en la respuesta:", data.message);
@@ -68,7 +64,6 @@ document.addEventListener("DOMContentLoaded", function() {
     })
     .catch(error => console.error("Error en la solicitud:", error));
   
-    // Filtrar en el cliente cuando el usuario escribe
     searchInput.addEventListener("input", e => {
         const value = e.target.value.toLowerCase();
         const filteredUsers = users.filter(user => 

@@ -21,14 +21,12 @@ btnGuardar.addEventListener("click", function() {
         return;
     }
 
-    // Guardar la tarjeta SUBE en localStorage (array de tarjetas)
     let tarjetasSube = JSON.parse(localStorage.getItem("tarjetasRedBus")) || [];
     tarjetasSube.push(subeValue);
     localStorage.setItem("tarjetasRedBus", JSON.stringify(tarjetasSube));
 
     alert("Has ingresado el número de tu RedBus con éxito");
 
-    // Resetear input y botones
     inputSube.value = "";
     inputSube.style.display = "none";
     btnGuardar.style.display = "none";

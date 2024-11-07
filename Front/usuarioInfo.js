@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const token = localStorage.getItem('authToken');  // Asegúrate de que 'authToken' contiene el token
+    const token = localStorage.getItem('authToken'); 
 
     fetch("https://db-projecto.vercel.app/usuarioInfo", {
         method: 'GET',
         headers: {
-            "Authorization": `Bearer ${token}`,  // Envía el token en el formato correcto
+            "Authorization": `Bearer ${token}`,  
             "Content-Type": "application/json"
         }
     })
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const nombreElement = document.getElementById("nombreUser");
         const apellidoElement = document.getElementById("apellidoUser");
         const dniElement = document.getElementById("dniUser");
-        const mailElement = document.getElementById("emailUser");  // Cambiado a "mail"
+        const mailElement = document.getElementById("emailUser");  
         const direccionElement = document.getElementById("direccionUser");
 
         if (data.length > 0) {
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
             nombreElement.textContent = nombre;
             apellidoElement.textContent = apellido;
             dniElement.textContent = dni;
-            mailElement.textContent = mail;  // Cambiado a "mail"
+            mailElement.textContent = mail;  
             direccionElement.textContent = direccion;
         } else {
             alert("No se encontró información del usuario.");
