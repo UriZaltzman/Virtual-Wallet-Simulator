@@ -52,12 +52,11 @@ body{
     display: flex;
     position: relative;
     top:20px;
-    align-items: center;
-    justify-content: center;
     width: 90%;
     height: 160px;
     background-color:#fff;  
     border-radius: 15px;
+    justify-content: center;
 }
 
 .monto {
@@ -70,11 +69,12 @@ body{
     margin-left: 15px;
 }
 
-.monedas{
-    display: flex;
+#lblSaldo {
+    text-align: center;
+    justify-content: center;
     position: relative;
-    bottom: 190px;
-    left: 50px;
+    bottom: 180px;
+    left: 60px;
 }
 
 .transeferir_dinero ,
@@ -93,23 +93,23 @@ body{
 .transeferir_dinero a,
 .ingresar_dinero a {
     text-decoration: none;
-    color: #fff; /* Ensure link text color is white */
+    color: #fff;
     width: 100%;
     text-align: center;
     display: inline-block;
 }
 
 .rectangleMonto {
-    position: relative; 
+    display: flex ;
 }
 
 .btnJuntos {
-    position: relative; 
-    bottom: 120px; 
-    left: 73px; 
-    transform: translateX(-50%); 
+    position: relative;
+    bottom: 120px;
+    left: 36px;
+    transform: translateX(-50%);
     display: flex;
-    gap: 10px; 
+    gap: 10px;
 }
 
 .transeferir_dinero, .ingresar_dinero {
@@ -197,5 +197,3 @@ body{
     border-radius: 15px;
     height: 160px;
 }
-
-

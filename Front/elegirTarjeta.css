@@ -47,3 +47,33 @@ button:hover{
     background-color:rgb(104, 104, 104) ;
     cursor: pointer;
 }
+
+
+.btnHome{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 100%;
+}
+
+.btnHome i{
+    font-size: 24px;
+}
+
+.aHome{
+    margin-top: 5px;
+    margin-right: 240px;
+}
+
+.aHome a{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 100%;
+}
+
+.btnHome:hover{
+    color: blue;
+    cursor: pointer;
+}
+
