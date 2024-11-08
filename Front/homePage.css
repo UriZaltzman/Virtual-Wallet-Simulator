@@ -1,4 +1,4 @@
-/* *{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -50,8 +50,6 @@ body{
 
 .rectangleMonto {
     display: flex;
-    position: relative;
-    top:20px; 
     align-items: center;
     justify-content: center;
     width: 90%;
@@ -60,21 +58,21 @@ body{
     border-radius: 15px;
 }
 
-.monto {
+.container-saldo{
+    justify-content: space-between;
     display: flex;
-    text-align: center;
-    font-weight: bold;
-    font-size: 45px;
-    color: #000;
-    margin-top: 63px;
-    margin-left: 15px;
+    flex-direction: column;
+    height: 80%;
 }
 
-.monedas{
-    display: flex;
-    position: relative;
-    bottom: 190px;
-    left: 50px;
+.divLbl label{
+    color: #000;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.divLbl{
+    text-align: center;
 }
 
 .transeferir_dinero ,
@@ -99,17 +97,10 @@ body{
     display: inline-block;
 }
 
-.rectangleMonto {
-    position: relative; 
-}
-
 .btnJuntos {
-    position: relative; 
-    bottom: 120px; 
-    left: 73px; 
-    transform: translateX(-50%); 
     display: flex;
-    gap: 10px; 
+    margin: 8px;
+    gap: 6px;
 }
 
 .transeferir_dinero, .ingresar_dinero {
@@ -181,15 +172,13 @@ body{
     width: 90%;
     background-color:#fff;  
     border-radius: 15px;
-    position:relative;
-    bottom: 80px;
+    margin-top: 10px;
 }
 
+
 .movementsRectangle{
-    position: relative;
-    bottom: 60px;
+    margin-top: 10px;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 90%;
@@ -204,59 +193,13 @@ body{
 }
 
 .low-balance {
-    transform: translateY(0);
+    font-size: 50px;
 }
 
 .high-balance {
-    transform: translateY(-20px);
-} */
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+    font-size: 35px;
 }
 
-body{
-    background: #000;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-}
-
-#wrapper {
-    width: 350px;
-    background-color: #000;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.iconsUp {
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 10px 0;
-}
-
-.iconsUp i {
-    font-size: 50px;
-    color: #fff; 
-    cursor: pointer;
-}
-
-.juntosIcons{
-    display: flex;
-}
-
-.iconsUp a :hover{
-    color: #14d0ff;
+.noSaldo {
+    font-size: 16px;
 }

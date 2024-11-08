@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const saldo = data[0].saldo;
                 lblSaldo.textContent = `$${saldo}`;
                 
-                if (saldo < 1000) {
+                if (saldo < 100000) {
                     lblSaldo.classList.add("low-balance");
                     lblSaldo.classList.remove("high-balance");
                     console.log("low-balance");
@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             } else {
                 lblSaldo.textContent = "Saldo no disponible";
+                lblSaldo.classList.add("noSaldo");
                 console.error("Formato de datos inesperado:", data);
             }
         })
