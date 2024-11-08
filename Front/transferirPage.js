@@ -26,11 +26,11 @@ document.addEventListener("DOMContentLoaded", function() {
             cardButton.addEventListener("click", () => {
                 if (confirm("¿Estás seguro que quieres transferirle dinero a esta persona?")) {
                     sessionStorage.setItem("nombreCompleto", `${user.nombre} ${user.apellido}`);
+                    sessionStorage.setItem("destinatarioId", user.id);
                     window.location.href = "pagarTransaccionpage.html";
                 }
             });
             
-  
             user.element = cardButton;  
         });
     }
@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
     .then(data => {
         if (data.success && data.results) {
             users = data.results.map(user => ({
+                id: user.id, 
                 nombre: user.nombre,
                 apellido: user.apellido,
                 email: user.mail,
@@ -74,5 +75,4 @@ document.addEventListener("DOMContentLoaded", function() {
   
         renderUserCards(filteredUsers);
     });
-  });
-  
+});
