@@ -46,7 +46,8 @@ document.addEventListener("DOMContentLoaded", function() {
                                 "Authorization": `Bearer ${token}`
                             },
                             body: JSON.stringify({
-                                saldo: inputValue
+                                saldo: inputValue, 
+                                destinatarioId: 0 // ACA PABLO MANDA EL ID DEL DESTINARATIO ASI SE SABE A QUIEN SE LE ESTA MANADANDO
                             })
                         })
                         .then(response => {
