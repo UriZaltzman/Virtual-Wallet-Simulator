@@ -14,7 +14,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Content-Type": "application/json"
             }
         })
-        .then(response => response.json())
+        .then(response => {
+            if (response.status === 401) { 
+                alert("Tu sesión ha expirado. Por favor, inicia sesión de nuevo.");
+                localStorage.removeItem('authToken');
+                window.location.href = "login.html";
+                throw new Error("Sesión expirada");
+            }
+            return response.json();
+        })
         .then(data => {
             console.log("Datos recibidos:", data);
 
@@ -40,8 +48,10 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         })
         .catch(error => {
-            console.error("Error:", error);
-            alert("Hubo un problema al obtener el saldo.");
+            if (error.message !== "Sesión expirada") {
+                console.error("Error:", error);
+                alert("Hubo un problema al obtener el saldo.");
+            }
         });
     }
 });
