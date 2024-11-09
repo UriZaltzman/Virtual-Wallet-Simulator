@@ -114,3 +114,28 @@ span{
     position: relative;
     top: 5px;
 }
+
+#inputNumber {
+    background: transparent; /* Sin fondo */
+    border: none;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 18px;
+    color: #fff; 
+    outline: none; 
+    transition: all 0.3s ease; 
+    width: 70%; 
+    box-sizing: border-box; 
+    text-align: center;
+}
+
+#inputNumber:focus {
+    border-color: #00d49f; 
+    box-shadow: 0 0 0 2px rgba(0, 188, 212, 0.3); 
+}
+  
+#inputNumber::placeholder {
+    color: #aaa; 
+    opacity: 1; 
+}
+  

@@ -33,6 +33,11 @@ document.addEventListener("DOMContentLoaded", function() {
             alert("No puede transferir mas plata que la que tienes en cuenta");
             return;
         }
+
+        if(inputValue == 0){
+            alert("No puedes enviarle 0 pesos");
+            return;
+        }
         let width = 0;
         let fetchCalled = false;
         const spanText = btnTransferir.querySelector("span");
