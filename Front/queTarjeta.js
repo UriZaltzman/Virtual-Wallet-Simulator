@@ -15,25 +15,35 @@ addSube.addEventListener("click", function() {
 });
 
 btnGuardar.addEventListener("click", function() {
-    const subeValue = inputSube.value;
+    const subeValue = parseInt(inputSube.value, 10);
     if (!subeValue) {
         alert("Por favor, ingrese el número de Sube");
         return;
     }
 
-    const token = localStorage.getItem('authToken'); 
+    const token = localStorage.getItem('authToken');
+    if (!token) {
+        alert("No se encontró el token de autenticación. Inicie sesión nuevamente.");
+        return;
+    }
 
-    fetch("https://db-projecto.vercel.app/ingresarSube", {
+    const subeInfo = {
+        nroSube: subeValue
+    };
+
+    fetch("http://localhost:3000/ingresarSube", {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${token}`
         },
-        body: JSON.stringify({ nroSube: subeValue }) 
+        body: JSON.stringify(subeInfo)
     })
     .then(response => {
         if (!response.ok) {
-            throw new Error("Error al ingresar la Sube");
+            return response.json().then(errorData => {
+                throw new Error(errorData.error || "Error al ingresar la Sube");
+            });
         }
         return response.json();
     })
@@ -45,9 +55,8 @@ btnGuardar.addEventListener("click", function() {
         addSube.style.display = "inline";
     })
     .catch(error => {
-        console.error("Hubo un problema con el registro:", error);
-        alert("Hubo un problema con el registro");
+        console.error("Hubo un problema con el registro:", error.message);
+        alert(`Hubo un problema con el registro: ${error.message}`);
     });
 });
-
-
+    
