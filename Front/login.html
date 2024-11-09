@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
     <link rel="stylesheet" href="login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <div class="container">
         <div class="form-container">
                 <h2>Iniciar Sesión</h2>
                 <input type="email" id="login-email" placeholder="Correo Electrónico" required>
-                <input type="password" id="login-password" placeholder="Contraseña" required>
-                    <a href="ForgotPasswordPage.html" class="forgotPassword">olvide mi contraseña</a></p>
+                <div class="password">
+                    <input type="password" id="login-password" placeholder="Contraseña" required>
+                    <i class='bx bx-low-vision toggle-visibility' id="passIconId" onclick="showPass()"></i>
+                    <a href="ForgotPasswordPage.html" class="forgotPassword">olvide mi contraseña</a>   
+                </div>
                 <button type="submit" id="button" >Ingresar</button>
                 <p class="register-link">¿No tienes una cuenta? <a href="registro2.html">Regístrate aquí</a></p>
         </div>

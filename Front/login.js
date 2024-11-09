@@ -1,4 +1,20 @@
+function showPass() {
+    const passwordField = document.getElementById("login-password");
+    const icon = document.getElementById("passIconId");
+
+    if (passwordField.type === "password") {
+        passwordField.type = "text";
+        icon.classList.remove('bx-low-vision');
+        icon.classList.add('bx-show-alt'); 
+    } else {
+        passwordField.type = "password"; 
+        icon.classList.remove('bx-show-alt');
+        icon.classList.add('bx-low-vision');
+    }
+}
+
 document.getElementById('button').addEventListener('click', async () => {
+    
     const email = document.getElementById('login-email').value;
     const password = document.getElementById('login-password').value;
 
