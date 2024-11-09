@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const token = localStorage.getItem('authToken'); 
     const nombreCompleto = sessionStorage.getItem("nombreCompleto");
     const destinatarioId = sessionStorage.getItem("destinatarioId");
+    const saldo = localStorage.getItem("saldoCuenta");
 
     if (nombreCompleto) {
         lblNomCompleto.textContent = nombreCompleto;
@@ -28,6 +29,10 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
+        if(inputValue > saldo){
+            alert("No puede transferir mas plata que la que tienes en cuenta");
+            return;
+        }
         let width = 0;
         let fetchCalled = false;
         const spanText = btnTransferir.querySelector("span");

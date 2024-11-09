@@ -41,6 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     lblSaldo.classList.remove("low-balance");
                     console.log("high-balance");
                 }
+
+                localStorage.setItem("saldoCuenta", saldo);
+                
             } else {
                 lblSaldo.textContent = "Saldo no disponible";
                 lblSaldo.classList.add("noSaldo");
