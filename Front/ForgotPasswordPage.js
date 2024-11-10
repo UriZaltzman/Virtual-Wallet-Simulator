@@ -43,12 +43,53 @@ btnReestablecer.addEventListener("click", function() {
         if (!equalPassword) {
         alert("Las contraseñas no son iguales, reescribalas.");
         return;
-        } else {
-            alert("La contraseña se ha reestablecido con éxito.");
         }
-        window.location.href = "homePage.html";
     } catch (error) {
         console.log(error);
         res.status(500).json("Error al reestablecer la contraseña");
+    }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const emailValue = document.getElementById("inputEmail");
+    const passwordField = document.getElementById("passwordId");
+    const passwordField2 = document.getElementById("passwordId2");
+    const btnReestablecer = document.getElementById("btnReestablecer");
+
+    const token = localStorage.getItem('authToken');
+    console.log(token);
+
+    if (btnReestablecer) {
+        btnReestablecer.addEventListener("click", () => {
+            const passwordInfo = {
+                nuevaContrasena: passwordField.value,
+                confirmarContrasena: passwordField2.value,
+                mail: emailValue.value
+            };
+
+            fetch("http://localhost:3000/forgotPassword", {
+                method: "POST",
+                headers: {
+                    // "Authorization": `Bearer ${token}`,
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(passwordInfo)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Error al cambiar la contraseña");
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log(data);
+                alert("Se ha cambiado la contraseña exitosamente");
+                window.location.href = "login.html";
+            })
+            .catch(error => {
+                console.error(error);
+                alert("Error al cambiar la contraseña");
+            });
+        });
     }
 });
