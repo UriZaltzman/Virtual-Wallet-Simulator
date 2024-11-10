@@ -78,6 +78,20 @@ body {
     margin-left: 10px;
 }
 
+.btnRecargar {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.recargar{
+    position: relative;
+    top: 1px;
+}
+
 .transeferir_dinero ,
 .ingresar_dinero {
     display: flex;
