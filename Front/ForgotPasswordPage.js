@@ -34,62 +34,56 @@ btnReestablecer.addEventListener("click", function() {
     const passwordField = document.getElementById("passwordId");
     const passwordField2 = document.getElementById("passwordId2");
 
-    try {
-        if(!passwordField.value || !passwordField2.value){
-            alert("Complete los campos");
-            return;
-        }
-        const equalPassword = passwordField.value === passwordField2.value;
-        if (!equalPassword) {
+    if(!passwordField.value || !passwordField2.value){
+        alert("Complete los campos");
+        return;
+    }
+    const equalPassword = passwordField.value === passwordField2.value;
+    if (!equalPassword) {
         alert("Las contraseñas no son iguales, reescribalas.");
         return;
-        }
-    } catch (error) {
-        console.log(error);
-        res.status(500).json("Error al reestablecer la contraseña");
     }
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-    const emailValue = document.getElementById("inputEmail");
-    const passwordField = document.getElementById("passwordId");
-    const passwordField2 = document.getElementById("passwordId2");
-    const btnReestablecer = document.getElementById("btnReestablecer");
-
-    const token = localStorage.getItem('authToken');
-    console.log(token);
-
-    if (btnReestablecer) {
-        btnReestablecer.addEventListener("click", () => {
-            const passwordInfo = {
-                nuevaContrasena: passwordField.value,
-                confirmarContrasena: passwordField2.value,
-                mail: emailValue.value
-            };
-
-            fetch("http://localhost:3000/forgotPassword", {
-                method: "POST",
-                headers: {
-                    // "Authorization": `Bearer ${token}`,
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(passwordInfo)
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error("Error al cambiar la contraseña");
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log(data);
-                alert("Se ha cambiado la contraseña exitosamente");
-                window.location.href = "login.html";
-            })
-            .catch(error => {
-                console.error(error);
-                alert("Error al cambiar la contraseña");
-            });
-        });
+    else{
+            const emailValue = document.getElementById("inputEmail");
+            const passwordField = document.getElementById("passwordId");
+            const passwordField2 = document.getElementById("passwordId2");
+            const btnReestablecer = document.getElementById("btnReestablecer");
+        
+            const token = localStorage.getItem('authToken');
+            console.log(token);
+        
+            if (btnReestablecer) {
+                btnReestablecer.addEventListener("click", () => {
+                    const passwordInfo = {
+                        nuevaContrasena: passwordField.value,
+                        confirmarContrasena: passwordField2.value,
+                        mail: emailValue.value
+                    };
+        
+                    fetch("https://db-projecto.vercel.app/forgotPassword", {
+                        method: "POST",
+                        headers: {
+                            // "Authorization": `Bearer ${token}`,
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(passwordInfo)
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error("Error al cambiar la contraseña");
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log(data);
+                        alert("Se ha cambiado la contraseña exitosamente");
+                        window.location.href = "login.html";
+                    })
+                    .catch(error => {
+                        console.error(error);
+                        alert("Error al cambiar la contraseña");
+                    });
+                });
+            }
     }
 });
