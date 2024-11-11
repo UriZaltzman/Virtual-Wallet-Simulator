@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
             user.apellido.toLowerCase().includes(value) ||
             user.email.toLowerCase().includes(value)
         );
-  
+        
         renderUserCards(filteredUsers);
     });
 });

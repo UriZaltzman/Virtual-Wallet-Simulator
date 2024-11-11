@@ -38,7 +38,7 @@ body {
 
 .iconsUp i {
     font-size: 50px;
-    color: #fff; 
+    color: #ADC4E2;
     cursor: pointer;
 }
 
@@ -47,7 +47,7 @@ body {
 }
 
 .iconsUp a :hover{
-    color: #14d0ff;
+    color: rgb(61, 43, 129);
 }
 
 .rectangleMonto {
@@ -56,7 +56,7 @@ body {
     justify-content: center;
     width: 90%;
     height: 160px;
-    background-color:#fff;  
+    background-color: #E71366 ;  
     border-radius: 15px;
 }
 
@@ -68,7 +68,7 @@ body {
 }
 
 .divLbl label{
-    color: #000;
+    color: #ADC4E2;
     font-weight: bold;
     font-size: 50px;
 }
@@ -82,7 +82,7 @@ body {
     padding: 5px 10px;
     border: none;
     border-radius: 5px;
-    background-color: #000;
+    background-color: rgb(50, 34,104);
     color: #fff;
     cursor: pointer;
 }
@@ -102,7 +102,6 @@ body {
     border-radius: 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #000;
 }
 
 .transeferir_dinero a,
@@ -121,7 +120,7 @@ body {
 }
 
 .transeferir_dinero, .ingresar_dinero {
-    background-color: black; 
+    background-color: rgb(50, 34,104); 
     color: #fff; 
     padding: 10px 20px; 
     border-radius: 10px; 
@@ -262,7 +261,7 @@ footer {
     background-color: #222;
     padding: 10px;
     font-size: 12px;
-    color: #aaa;
+    color: #aaaaaa;
 }
 
 .footer-section i{
