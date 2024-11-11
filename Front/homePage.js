@@ -1,35 +1,20 @@
-const iconMenu = document.getElementById("iconMenu");
-
-if(iconMenu){
-    iconMenu.addEventListener("click", () => {
-        window.location.href = "menuPage.html";
-    })
-}
-
 document.addEventListener("DOMContentLoaded", () => {
+    const iconMenu = document.getElementById("iconMenu");
+    if (iconMenu) {
+        iconMenu.addEventListener("click", () => {
+            window.location.href = "menuPage.html";
+        });
+    }
+
     const token = localStorage.getItem('authToken');
 
     if (!token) {
         alert("Por favor, inicia sesión para continuar.");
         window.location.href = "login.html";
-<<<<<<< Updated upstream
         return;
     }
-=======
-    } else {
-        fetch("https://db-projecto.vercel.app/verSaldo", {
-        //fetch("http://localhost:3000/verSaldo", {
-            method: 'GET',
-            headers: {
-                "Authorization": `Bearer ${token}`,
-                "Content-Type": "application/json"
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log("Datos recibidos:", data);
->>>>>>> Stashed changes
 
+    // Solicitar saldo solo si hay un token válido
     fetch("https://db-projecto.vercel.app/verSaldo", {
         method: 'GET',
         headers: {
@@ -64,15 +49,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 console.log("high-balance");
             }
 
+            // Muestra el botón de recarga si el saldo es 0 o menor
             if (saldo <= 0) {
                 document.getElementById("divLbl").innerHTML = "<button id='btnRecargar' class='btnRecargar'>Recargar Saldo <i class='bx bx-rotate-right recargar'></i></button>";
-
                 const btnRecargar = document.getElementById("btnRecargar");
+
                 if (btnRecargar) {
                     btnRecargar.addEventListener("click", () => {
-                        console.log("Botón de recargar presionado"); 
+                        console.log("Botón de recargar presionado");
                         fetch("https://db-projecto.vercel.app/recargarSaldo", {
-                            method: "PUT", 
+                            method: "PUT",
                             headers: {
                                 "Content-Type": "application/json",
                                 "Authorization": `Bearer ${token}`
@@ -90,6 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
 
+            // Guardar el saldo en localStorage
             localStorage.setItem("saldoCuenta", saldo);
 
         } else {
