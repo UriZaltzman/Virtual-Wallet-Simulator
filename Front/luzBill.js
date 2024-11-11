@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     window.location.href = "pagarImpuesto.html";*/
                     const token = localStorage.getItem('authToken');  // Asegúrate de que 'authToken' contiene el token
     
-                    fetch("http://localhost:3000/pagarImpuesto", {
+                    fetch("https://db-projecto.vercel.app/pagarImpuesto", {
                         method: 'POST',
                         headers: {
                             "Authorization": `Bearer ${token}`,  // Envía el token en el formato correcto
@@ -102,12 +102,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function CargarImpuestosPendientes() {
         const infoTipoImpuesto = {
-            tipo: 2
+            tipo: 2 // TIPO 2 electricidad - 1 agua - 3 fuego
         };
     
         const token = localStorage.getItem('authToken');  // Asegúrate de que 'authToken' contiene el token
     
-        fetch("http://localhost:3000/verimpuestos", {
+        fetch("https://db-projecto.vercel.app/verimpuestos", {
             method: 'POST',
             headers: {
                 "Authorization": `Bearer ${token}`,  // Envía el token en el formato correcto
