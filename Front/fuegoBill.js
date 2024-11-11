@@ -6,6 +6,8 @@ const inputSection = document.getElementById("inputSection");
 const btnPagar = document.getElementById("btnPagar");
 const progressBar = document.getElementById("progress-bar");
 
+sessionStorage.setItem("tipo", 3);
+
 inputSection.style.display = "none";
 lblNro.style.display = "none";
 btnPagar.style.display = "none";
@@ -48,4 +50,4 @@ btnPagar.addEventListener("click", function() {
     }, 40);
 });
 
-
+document.addEventListener("DOMContentLoaded", function() {alert("3")});
