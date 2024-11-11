@@ -4,8 +4,23 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!token) {
         alert("Por favor, inicia sesión para continuar.");
         window.location.href = "login.html";
+<<<<<<< Updated upstream
         return;
     }
+=======
+    } else {
+        fetch("https://db-projecto.vercel.app/verSaldo", {
+        //fetch("http://localhost:3000/verSaldo", {
+            method: 'GET',
+            headers: {
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json"
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log("Datos recibidos:", data);
+>>>>>>> Stashed changes
 
     fetch("https://db-projecto.vercel.app/verSaldo", {
         method: 'GET',

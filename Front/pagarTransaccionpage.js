@@ -62,7 +62,9 @@ document.addEventListener("DOMContentLoaded", function() {
                     console.log("Saldo:", inputValue);
                     console.log("Destinatario ID:", destinatarioId);
 
+                    //poner esto: https://db-projecto.vercel.app/ en un lugar común por única vez, para todas las llamadas. Generalmente un archivo tipo .env
                     fetch("https://db-projecto.vercel.app/transferir", {
+                    //fetch("http://localhost:3000/transferir", {
                         method: 'POST',
                         headers: {
                             "Content-Type": "application/json",
