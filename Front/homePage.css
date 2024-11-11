@@ -25,12 +25,15 @@ body {
     margin-bottom: 30px;
 }
 
+header{
+    width: 100%;
+}
+
 .iconsUp {
     display: flex;
     position: relative;
     align-items: center;
     justify-content: space-between;
-    width:100%;
     height: 53px;
     background-color: #80CBC4;
     border-bottom: 1px solid #000;
@@ -40,6 +43,10 @@ body {
     font-size: 35px;
     color:#3368A6;
     cursor: pointer;
+}
+
+.iconsUp i:hover{
+    color: rgb(61, 43, 129);
 }
 
 .bx-home {
@@ -66,7 +73,7 @@ body {
     height: 179px;
     background-color: #CCDBF7 ; 
     border: 1px solid #000;  
-/*     border-radius: 15px; */
+    border-radius: 15px; 
 }
 
 .container-saldo{
@@ -88,15 +95,17 @@ body {
 }
 
 .btnRecargar {
+    font-weight: bold;
     padding: 5px 10px;
-    border: none;
+    border: 1px solid #000;
     border-radius: 5px;
     background-color: #84CEF8;
-    color: #fff;
+    color: #000;
     cursor: pointer;
 }
 
 .recargar{
+    color: #000;
     position: relative;
     top: 1px;
 }
@@ -117,6 +126,7 @@ body {
 .ingresar_dinero a {
     text-decoration: none;
     color: #000; 
+    font-weight: bold;
     width: 100%;
     text-align: center;
     display: inline-block;
@@ -161,17 +171,6 @@ body {
     margin: 5px;
 }
 
-.cargar_sube img {
-    position: relative;
-    width: 70%; 
-    height: 70%;
-    justify-content: center;
-    align-items: center;
-    top:2px;
-    object-fit: cover; 
-    border-radius: 10%; 
-}
-
 .cargar_sube a,
 .cargar_datos a,
 .pagar_impuestos a {
@@ -200,10 +199,21 @@ body {
     height: 107px;
     background-color:#fff;  
     border: 5px solid #80CBC4;
-/*     border-radius: 15px; */
+    border-radius: 15px;
     margin-top: 10px;
 }
 
+.divSube, .divPhone, .divImpuestos {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.divSube, .divImpuestos, .divPhone p{
+    color: #3368A6;
+    font-size: 10px;
+    font-weight: bold;
+}
 
 .movementsRectangle{
     margin-top: 10px;
@@ -234,7 +244,7 @@ body {
 }
 
 footer {
-    background-color: #fff;
+    background-color: #80CBC4;
     padding: 20px 0;
     width: 100%;
     text-align: center;

@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const token = localStorage.getItem('authToken'); 
     const nombreCompleto = sessionStorage.getItem("nombreCompleto");
     const destinatarioId = sessionStorage.getItem("destinatarioId");
-    const saldo = localStorage.getItem("saldoCuenta");
+    const saldo = parseFloat(localStorage.getItem("saldoCuenta"));
 
     if (nombreCompleto) {
         lblNomCompleto.textContent = nombreCompleto;

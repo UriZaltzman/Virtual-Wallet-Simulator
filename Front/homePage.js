@@ -6,6 +6,19 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    const bellIcon = document.getElementById("bellIcon");
+        bellIcon.addEventListener("click", () => {
+            alert("Proximamente...");
+            return;
+    })
+
+
+    const helpIcon = document.getElementById("helpIcon");
+        helpIcon.addEventListener("click", () => {
+            alert("Proximamente...");
+            return;
+    })
+
     const token = localStorage.getItem('authToken');
 
     if (!token) {
@@ -76,8 +89,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
 
-            // Guardar el saldo en localStorage
             localStorage.setItem("saldoCuenta", saldo);
+            console.log("Saldo guardado en localStorage:", localStorage.getItem("saldoCuenta"));
+            
 
         } else {
             lblSaldo.textContent = "Saldo no disponible";

@@ -1,13 +1,12 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
 }
 
-body{
-    background: #000;
+body {
+    background: #E7E7E7;
     height: 100vh; 
     display: flex;
     flex-direction: column;
@@ -17,15 +16,18 @@ body{
 
 .container {
     width: 350px;
-    background-color: #000;
-    padding: 20px;
+    background-color: #E7E7E7;
     border-radius: 10px;
-    box-shadow: 0 0 15px #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px; /* Espacio entre el wrapper y el inicio de la pantalla */
-    margin-bottom: 40px; /* Espacio adicional para separar del footer */
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+
+header{
+    width: 100%;
 }
 
 .iconsUp {
@@ -33,21 +35,35 @@ body{
     position: relative;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    padding: 10px 0;
+    height: 53px;
+    background-color: #80CBC4;
+    border-bottom: 1px solid #000;
 }
 
 .iconsUp i {
-    font-size: 50px;
-    color: #005ec9;
+    font-size: 35px;
+    color:#3368A6;
     cursor: pointer;
+}
+
+.iconsUp i:hover{
+    color: rgb(61, 43, 129);
+}
+
+.bx-home {
+    margin-right: 200px;
+}
+
+.bx-menu:hover{
+    color: rgb(61, 43, 129);
 }
 
 .juntosIcons{
     display: flex;
 }
+
 .iconsUp a :hover{
-    cursor: pointer;
+    color: rgb(61, 43, 129);
 }
 
 .buttonsContainer {
@@ -79,8 +95,6 @@ button {
     padding: 15px;
     border-radius: 20px;
     border: none;
-    background-color: #fff;
-    color: #000;
     font-size: 18px;
     text-align: center;
     display: flex;
@@ -92,9 +106,10 @@ button {
 }
 
 .buttonsContainer button {
-    background-color: #fff;
-    color: #005ec9;
+    background-color: #80CBC4;
+    color: #3368A6;
     border-radius: 20px;
+    border: 1px solid #000;
 }
 
 .buttonsContainer button:hover {
@@ -103,15 +118,15 @@ button {
 
 .infoPersona i{
     font-size: 20px;
-    color: #005ec9;
+    color: #3368A6;
     background-color: transparent;
     margin-left: 10px;
     margin-bottom: 1.5px;
-} 
+}
 
 .datosCuenta i{
     font-size: 20px;
-    color: #005ec9;
+    color: #3368A6;
     background-color: transparent;
     margin-left: 10px;
     margin-bottom: 1.5px;
@@ -119,7 +134,7 @@ button {
 
 .seguridad i{
     font-size: 20px;
-    color: #005ec9;
+    color: #3368A6;
     background-color: transparent;
     margin-left: 10px;
     margin-bottom: 1.5px;
@@ -127,14 +142,14 @@ button {
 
 .nivelCuenta i{
     font-size: 20px;
-    color: #005ec9;
+    color: #3368A6;
     background-color: transparent;
     margin-left: 10px;
     margin-bottom: 1.5px;
 }
 
 footer {
-    background-color: #fff;
+    background-color: #80CBC4;
     padding: 20px 0;
     width: 100%;
     text-align: center;
@@ -174,7 +189,7 @@ footer {
     background-color: #222;
     padding: 10px;
     font-size: 12px;
-    color: #aaa;
+    color: #aaaaaa;
 }
 
 .footer-section i{
