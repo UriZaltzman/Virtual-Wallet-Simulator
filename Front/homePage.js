@@ -1,3 +1,11 @@
+const iconMenu = document.getElementById("iconMenu");
+
+if(iconMenu){
+    iconMenu.addEventListener("click", () => {
+        window.location.href = "menuPage.html";
+    })
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     const token = localStorage.getItem('authToken');
 

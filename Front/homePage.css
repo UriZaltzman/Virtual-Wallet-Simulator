@@ -23,23 +23,33 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px; /* Espacio entre el wrapper y el inicio de la pantalla */
+    margin-top: 8px; /* Espacio entre el wrapper y el inicio de la pantalla */
     margin-bottom: 30px; /* Espacio adicional para separar del footer */
 }
 
 .iconsUp {
+    margin-top: 10px;
     display: flex;
     position: relative;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    padding: 10px 0;
+    width:498px;
+    height: 53px;
+    background-color: #80CBC4;
 }
 
 .iconsUp i {
-    font-size: 50px;
+    font-size: 35px;
     color: #ADC4E2;
     cursor: pointer;
+}
+
+.bx-menu {
+    margin-right: 240px;
+}
+
+.bx-menu:hover{
+    color: rgb(61, 43, 129);
 }
 
 .juntosIcons{
@@ -54,8 +64,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 90%;
-    height: 160px;
+    width: 458.67px;
+    height: 179px;
     background-color: #E71366 ;  
     border-radius: 15px;
 }
