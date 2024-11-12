@@ -7,11 +7,27 @@
     <link rel="stylesheet" href="cargarSube.css">
     <title>Cargar Tarjeta Sube</title>
 </head>
+<header>
+    <div class="iconsUp">   
+        <i id="iconMenu" class='bx bx-home'>
+            <a href="homePage.html"></a>
+        </i>
+        <div class="juntosIcons">
+            <a href="#">
+                <i class="bx bx-bell"  id="bellIcon"></i>
+            </a>
+            <a href="infoPersona.html">
+                <i class='bx bx-user-circle'></i>
+            </a>
+            <i class='bx bxs-help-circle' id="helpIcon"></i>
+        </div>  
+    </div> 
+</header>
 <body>
     <div class="container">
         <h2>Cargar Tarjeta Sube</h2>
 
-        <p id="numeroSube" style="font-weight: bold; font-size: 15px; border-bottom: 2px solid #8b8b8ba1;"></p>
+        <p id="numeroSube" style="text-decoration: underline solid #80CBC4;"></p>
 
         <p>Elige tu monto</p>
         <div class="montos">
@@ -45,5 +61,34 @@
             document.getElementById("numeroSube").textContent = "No se ha seleccionado ningún número de SUBE.";
         }
     </script>
+
+    <script src="cargarSube.js"></script>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section info-integrantes">
+                <h3>Integrantes</h3>
+                <p>Pablo Vives, Pedro Tome, Uriel Zaltzman y Santiago Pimas</p>
+            </div>
+            <div class="footer-section info-proyecto">
+                <h3>Sobre el Proyecto</h3>
+                <p>Proyecto desarrollado para facilitar la gestión de transferencias bancarias con una interfaz amigable.</p>
+            </div>
+            <div class="footer-section redes-sociales">
+                <h3>Síguenos</h3>
+                <a href="" target="_blank"><i class='bx bxl-youtube' ></i></a> 
+                <a href="" target="_blank"><i class='bx bxl-twitter'></i></a> 
+                <a href="https://www.instagram.com/simvirtualwallet/" target="_blank"><i class='bx bxl-instagram-alt' ></i></a>
+            </div>
+            <div class="footer-section contacto">
+                <h3>Contacto</h3>
+                <a href="" target="_blank"><i class='bx bxl-gmail'></i></a>
+            </div> 
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 WalleTic.
+        </div>
+    </footer>
+
 </body>
 </html>
