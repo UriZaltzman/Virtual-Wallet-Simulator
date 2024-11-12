@@ -1,22 +1,22 @@
-const btnAdd = document.getElementById("btnAdd");
+/* const btnAdd = document.getElementById("btnAdd");
 const inputNro = document.getElementById("inputNro");
 const btnContinuar = document.getElementById("btnContinuar");
 const lblNro = document.getElementById("lblNro");
 const inputSection = document.getElementById("inputSection");
 const btnPagar = document.getElementById("btnPagar");
-const progressBar = document.getElementById("progress-bar");
+const progressBar = document.getElementById("progress-bar"); */
 
 sessionStorage.setItem("tipo", 3);
 
-inputSection.style.display = "none";
+/* inputSection.style.display = "none";
 lblNro.style.display = "none";
-btnPagar.style.display = "none";
+btnPagar.style.display = "none"; */
 
-btnAdd.addEventListener("click", function() {
+/* btnAdd.addEventListener("click", function() {
     btnAdd.style.display = "none";  
     inputSection.style.display = "block";  
-});
-
+}); */
+/* 
 btnContinuar.addEventListener("click", function() {
     const nroValue = inputNro.value;
     if (!nroValue) {
@@ -27,9 +27,9 @@ btnContinuar.addEventListener("click", function() {
     lblNro.style.display = "block";
     inputSection.style.display = "none";
     btnPagar.style.display = "block";  
-});
+}); */
 
-btnPagar.addEventListener("click", function() {
+/* btnPagar.addEventListener("click", function() {
     let width = 0;
     const spanText = btnPagar.querySelector("span");
 
@@ -48,7 +48,27 @@ btnPagar.addEventListener("click", function() {
             progressBar.style.width = width + '%'; 
         }
     }, 40);
-});
+}); */
+
+const iconMenu = document.getElementById("iconMenu");
+    if(iconMenu){
+        iconMenu.addEventListener("click", () => {
+            window.location.href = "homePage.html";
+        })
+    }
+    
+const bellIcon = document.getElementById("bellIcon");
+bellIcon.addEventListener("click", () => {
+    alert("Proximamente...");
+    return;
+})
+
+const helpIcon = document.getElementById("helpIcon");
+helpIcon.addEventListener("click", () => {
+    alert("Proximamente...");
+    return;
+})
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const impuestoCardTemplate = document.querySelector("[data-impuestos-template]");

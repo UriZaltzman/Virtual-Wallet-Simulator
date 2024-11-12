@@ -7,32 +7,74 @@
     <link rel="stylesheet" href="fuegoBill.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+<header>
+    <div class="iconsUp">   
+        <i id="iconMenu" class='bx bx-home'>
+            <a href="homePage.html"></a>
+        </i>
+        <div class="juntosIcons">
+            <a href="#">
+                <i class="bx bx-bell"  id="bellIcon"></i>
+            </a>
+            <a href="infoPersona.html">
+                <i class='bx bx-user-circle'></i>
+            </a>
+            <i class='bx bxs-help-circle' id="helpIcon"></i>
+        </div>  
+    </div> 
+</header>
 <body>
     <div class="container">
         <h2>Pagar el gas</h2>
-        <button id="btnAdd">Ingresar número de factura</button>
+        <!-- <button id="btnAdd">Ingresar número de factura</button>
         <div id="inputSection" style="display: none;">
             <input type="text" placeholder="Nro de Impuesto" maxlength="15" id="inputNro">
-            <button id="btnContinuar">Continuar</button> 
-        </div>
-        <label for="" id="lblNro" style="display: none;"></label>
-        <div class="montos">
+            <button id="btnContinuar">Continuar</button>  -->
+        <!-- <label for="" id="lblNro" style="display: none;"></label> -->
+        <!-- <div class="montos">
             <button id="btnPagar" style="display: none;">
                 <span>Pagar Impuesto</span>
                 <div id="progress-bar" class="progress-bar" style="display: none;"></div>
             </button>            
-        </div>
+        </div> -->
         <div class="user-cards" data-impuestos-cards-container></div>
           <template data-impuestos-template>
             <div class="card">
               <div class="body" data-tipo></div>
               <div class="body" data-saldo></div>
-            </div>
+        </div>  
           </template>
         <a href="addBill.html" class="aHome">
             <button class="btnHome"><i class='bx bx-exit bx-rotate-180'></i></button>
         </a>
     </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section info-integrantes">
+                <h3>Integrantes</h3>
+                <p>Pablo Vives, Pedro Tome, Uriel Zaltzman y Santiago Pimas</p>
+            </div>
+            <div class="footer-section info-proyecto">
+                <h3>Sobre el Proyecto</h3>
+                <p>Proyecto desarrollado para facilitar la gestión de transferencias bancarias con una interfaz amigable.</p>
+            </div>
+            <div class="footer-section redes-sociales">
+                <h3>Síguenos</h3>
+                <a href="" target="_blank"><i class='bx bxl-youtube' ></i></a> 
+                <a href="" target="_blank"><i class='bx bxl-twitter'></i></a> 
+                <a href="https://www.instagram.com/simvirtualwallet/" target="_blank"><i class='bx bxl-instagram-alt' ></i></a>
+            </div>
+            <div class="footer-section contacto">
+                <h3>Contacto</h3>
+                <a href="" target="_blank"><i class='bx bxl-gmail'></i></a>
+            </div> 
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 WalleTic.
+        </div>
+    </footer>
+
     <script src="fuegoBill.js"></script>
 </body>
 </html>
