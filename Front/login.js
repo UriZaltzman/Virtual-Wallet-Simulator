@@ -23,6 +23,11 @@ document.getElementById('button').addEventListener('click', async () => {
         contrasena: password
     };
 
+    if(!email ||!password){
+        alert("Completa los campos para Iniciar Sesión");
+        return;
+    }
+
     try {
         const response = await fetch('https://db-projecto.vercel.app/login', {
             method: 'POST',

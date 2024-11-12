@@ -6,59 +6,74 @@
 }
 
 body {
-    background: #000;
-    height: 100vh;
+    background: #E7E7E7;
+    height: 100vh; 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     color: #fff;
 }
 
 .container {
     width: 350px;
-    background-color: #000;
-    padding: 20px;
+    background-color: #E7E7E7;
+    border: 1px solid #80CBC4;
     border-radius: 10px;
-    box-shadow: 0 0 15px /* #39ff14 */ #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
+
 
 h2 {
     text-align: center;
+    margin-top: 20px;
     margin-bottom: 20px;
     font-size: 24px;
     font-weight: bold;
-    padding-bottom: 10px;
-    color: /*# 39ff14 */ #fff;
-    border-bottom: 2px solid #ffffff20;
+    color: #3368A6;
 }
 
 input {
-    width: 100%;
+    width: 90%;
     padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
-    background-color: #ffffff20;
-    color: #fff;
+    margin: 10px 5px;
+    border: 1px solid #80CBC4;
+    background-color: #E7E7E7;
+    color: #000;
     font-size: 16px;
     border-radius: 15px;
 }
 
 input::placeholder {
-    color: #ffffff20;
+    color: #505050;
 }
 
 button {
+    align-items: center;
     margin-top: 10px;
-    width: 60%;
-    padding: 12px;
-    border: none;
+    width: 70%;
+    padding: 12px 70px;
+    border: 1px solid #000;
     border-radius: 20px;
-    background-color: /* #39ff14 */ #fff;
-    color: /* white */ black;
+    background-color: #80CBC4;
+    color: #000;
     font-size: 16px;
     cursor: pointer;
-/*     transition: background-color 0.3s ease; */
+    font-weight: bold;
+}
+
+p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #3368A6;
+    font-weight: bold;
+}
+
+a{
+    color: #3368A6;
     font-weight: bold;
 }
 
@@ -69,13 +84,26 @@ button {
 }
 
 .register-link a {
-    color:#39ff14;
+    color:#3368A6;
     text-decoration: none;
     font-weight: bold;
 }
 
 .register-link a:hover {
     text-decoration: underline;
+}
+
+#login-password{
+    position: relative;
+    left: 13px;
+    width: 90%;
+    padding: 10px;
+    margin: 10px 5px;
+    border: 1px solid #80CBC4;
+    background-color: #E7E7E7;
+    color: #000;
+    font-size: 16px;
+    border-radius: 15px;
 }
 
 .form-container {
@@ -85,10 +113,10 @@ button {
 }
 
 .forgotPassword {
-    color: #39ff14;
+    color: #3368A6;
     text-decoration: none;
     font-weight: bold;
-    margin-left: 160px;
+    margin-left: 180px;
     font-size: 14px;
     margin-bottom: 5px;
     position: relative;
@@ -100,12 +128,11 @@ button {
 }
 
 #passIconId{
-    margin-left: 280px;
+    margin-left: 300px;
     position: relative;
-    bottom: 36.5px;
-}
-
-#passIconId:hover{
+    bottom: 37px;
+    color: #3368A6;
     cursor: pointer;
 }
+
 
