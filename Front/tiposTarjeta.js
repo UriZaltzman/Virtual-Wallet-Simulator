@@ -18,4 +18,15 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Proximamente...");
             return;
     })
-})
+
+    const btnSube = document.getElementById("btnSube");
+        btnSube.addEventListener("click", () => {
+            sessionStorage.setItem("TipoTarjeta", 1)
+            return;
+    })
+    const btnCordoba = document.getElementById("btnCordoba");
+         btnCordoba.addEventListener("click", () => {
+            sessionStorage.setItem("TipoTarjeta", 2)
+            return;
+    })
+});

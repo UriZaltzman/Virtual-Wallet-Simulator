@@ -30,10 +30,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const subeInfo = {
-        nroSube: subeValue
+        nroSube: subeValue,
+        tipo: sessionStorage.getItem("TipoTarjeta")
     };
 
-    fetch("https://db-projecto.vercel.app/ingresarSube", {
+    //fetch("https://db-projecto.vercel.app/ingresarSube", {
+    fetch ("http://localhost:3000/ingresarSube", {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
