@@ -54,4 +54,22 @@ document.addEventListener("DOMContentLoaded", function() {
     } else {
         console.error("Uno o más elementos no se encontraron en el DOM.");
     }
+
+    const iconMenu = document.getElementById("iconMenu");
+    iconMenu.addEventListener("click", () => {
+        window.location.href = "homePage.html";
+    })
+
+    const bellIcon = document.getElementById("bellIcon");
+    bellIcon.addEventListener("click", () => {
+        alert("Proximamente...");
+        return;
+    })
+
+    const helpIcon = document.getElementById("helpIcon");
+    helpIcon.addEventListener("click", () => {
+        alert("Proximamente...");
+        return;
+    })
+
 });
