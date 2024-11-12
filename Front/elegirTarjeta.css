@@ -87,12 +87,6 @@ h2{
     border-radius: 10px;
 }
 
-button:hover{
-    background-color:rgb(104, 104, 104) ;
-    cursor: pointer;
-}
-
-
 .btnHome{
     background-color: #3368A6;
     width: 100%;
@@ -170,4 +164,21 @@ footer {
 
 .footer-section i{
     font-size: 20px;
+}
+
+.tarjeta-btn{
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: #80CBC4;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tarjeta-btn:hover{
+    background-color: #3368A6;
+}
+
+#continuar{
+    color: #000;
+    cursor: pointer;
 }

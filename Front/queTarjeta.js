@@ -23,42 +23,42 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
+       // const tipo = sessionStorage.getItem("TipoTarjeta");
+
     const token = localStorage.getItem('authToken');
     if (!token) {
         alert("No se encontró el token de autenticación. Inicie sesión nuevamente.");
         return;
     }
 
-    const subeInfo = {
-        nroSube: subeValue,
-        tipo: sessionStorage.getItem("TipoTarjeta")
-    };
-
     //fetch("https://db-projecto.vercel.app/ingresarSube", {
-    fetch ("http://localhost:3000/ingresarSube", {
-        method: 'POST',
-        headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${token}`
-        },
-        body: JSON.stringify(subeInfo)
-    })
-    .then(response => {
-        if (!response.ok) {
-            return response.json().then(errorData => {
-                throw new Error(errorData.error || "Error al ingresar la Sube");
-            });
-        }
-        return response.json();
-    })
-    .then(data => {
-        alert("Has ingresado el número de tu Sube con éxito");
-        return window.location.href = "elegirTarjeta.html";
-    })
-    .catch(error => {
-        console.error("Hubo un problema con el registro:", error.message);
-        alert(`Hubo un problema con el registro: ${error.message}`);
-    });
+        fetch("http://localhost:3000/ingresarSube", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${token}`
+            },
+            body: JSON.stringify({
+                nroSube: subeValue, 
+                tipo: sessionStorage.getItem("TipoTarjeta")        
+            })
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Error al ingresar el número de Sube");
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log("Respuesta del servidor:", data);
+            alert("Has ingresado la sube con éxito");
+            return window.location.href = "elegirTarjeta.html";
+        })
+        .catch(error => {
+            console.error("Hubo un problema con el registro:", error.message);
+            alert(`Hubo un problema con el registro: ${error.message}`);
+        });
+    
     });
 
     const iconMenu = document.getElementById("iconMenu");

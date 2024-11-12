@@ -7,15 +7,22 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const bellIcon = document.getElementById("bellIcon");
-        bellIcon.addEventListener("click", () => {
-            alert("Proximamente...");
-            return;
-    })
-
+    bellIcon.addEventListener("click", () => {
+        alert("Próximamente...");
+        return;
+    });
 
     const helpIcon = document.getElementById("helpIcon");
-        helpIcon.addEventListener("click", () => {
-            alert("Proximamente...");
-            return;
-    })
-})
+    helpIcon.addEventListener("click", () => {
+        alert("Próximamente...");
+        return;
+    });
+
+    // Obtener y mostrar el valor de SUBE
+    const nroSube = sessionStorage.getItem("nroSube");
+    const numeroSubeElement = document.getElementById("numeroSube");
+
+    if (numeroSubeElement && nroSube) {
+        numeroSubeElement.textContent = `Número de SUBE: ${nroSube}`;
+    }
+});
