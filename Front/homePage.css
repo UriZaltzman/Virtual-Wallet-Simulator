@@ -291,7 +291,6 @@ footer {
     font-size: 20px;
 }
 
-/* Asegúrate de que la lista esté alineada correctamente dentro del contenedor */
 #movementsRectangle {
     margin-top: 10px;
     display: flex;
@@ -304,7 +303,6 @@ footer {
     box-sizing: border-box;
 }
 
-/* Estilo para la lista, para eliminar los márgenes por defecto */
 #transactionsList {
     list-style-type: none; /* Remueve los bullets por defecto */
     padding: 0;
@@ -312,29 +310,23 @@ footer {
     width: 100%; /* Asegura que la lista ocupe todo el ancho del contenedor */
 }
 
-/* Estilo para cada item de la lista */
 .transaction-item {
-    border-radius: 10px; 
-    /* margin-bottom: 10px; */
+    border-radius: 10px;
     display: flex;
     align-items: center;
     width: 100%;
-    /* padding: 15px; */
-    /* background-color: #E0F7FA; */
     box-sizing: border-box;
 }
 
-/* Estilo para los círculos personalizados en lugar de los puntos */
 .transaction-item::before {
     content: "";
-    width: 5px;   /* Tamaño del círculo */
-    height: 5px;  /* Tamaño del círculo */
-    background-color: #3368A6; /* Color del círculo */
-    border-radius: 50%; /* Hace que el círculo sea redondo */
-    margin-right: 10px; /* Espacio entre el círculo y el texto */
+    width: 8px;   
+    height: 8px;  
+    background-color: #3368A6; 
+    border-radius: 50%; 
+    margin-right: 15px;
 }
 
-/* Estilo para los detalles de cada transacción */
 .transaction-details p {
     color: #3368A6;
     font-size: 14px;

@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const token = localStorage.getItem("authToken"); // Obtenemos el token del localStorage
     const btnPagar = document.getElementById("btnPagar");
     btnPagar.addEventListener("click", () => {
-        fetch("http://localhost:3000/pagarSube", {
+        fetch("https://db-projecto.vercel.app/pagarSube", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

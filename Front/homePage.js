@@ -118,30 +118,26 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(data => {
         console.log("Datos de transacciones recibidos:", data);
     
-        // Si no se recibieron transacciones
         if (data.length === 0) {
             console.log("No se encontraron transacciones.");
         }
     
         const movementsRectangle = document.getElementById("movementsRectangle");
-        movementsRectangle.innerHTML = "<ul id='transactionsList' class='transactions-list'></ul>";
+        movementsRectangle.innerHTML = "<ul id='transactionsList'></ul>";
     
         const transactionsList = document.getElementById("transactionsList");
     
-        // Iteramos sobre las primeras 3 transacciones y aplicamos el estilo
-        data.slice(0, 3).forEach(transaction => {
+        data.forEach(transaction => {
             const listItem = document.createElement("li");
             listItem.classList.add("transaction-item");
     
-            // Agregamos el contenido de cada transacción
+            // Mostrar el nombre y apellido del destinatario (persona que recibió el dinero)
             listItem.innerHTML = `
                 <div class="transaction-details">
-                    <p class="transaction-amount">Monto: $${transaction.monto}</p>
-                    <p class="transaction-destination">Destino: ${transaction.destino}</p>
+                    <p><strong>Monto:</strong> $${transaction.monto}</p>
+                    <p><strong>Destino:</strong> ${transaction.nombre_destino} ${transaction.apellido_destino}</p>
                 </div>
             `;
-    
-            // Agregamos el `li` a la lista
             transactionsList.appendChild(listItem);
         });
     })
