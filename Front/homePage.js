@@ -7,18 +7,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const bellIcon = document.getElementById("bellIcon");
-        bellIcon.addEventListener("click", () => {
-            alert("Proximamente...");
-            return;
+    bellIcon.addEventListener("click", () => {
+        alert("Proximamente...");
+        return;
     })
-
 
     const helpIcon = document.getElementById("helpIcon");
-        helpIcon.addEventListener("click", () => {
-            alert("Proximamente...");
-            return;
+    helpIcon.addEventListener("click", () => {
+        alert("Proximamente...");
+        return;
     })
-
+        
     const token = localStorage.getItem('authToken');
 
     if (!token) {
@@ -88,10 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     });
                 }
             }
-
             localStorage.setItem("saldoCuenta", saldo);
-            console.log("Saldo guardado en localStorage:", localStorage.getItem("saldoCuenta"));
-            
 
         } else {
             lblSaldo.textContent = "Saldo no disponible";
@@ -105,4 +101,54 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Hubo un problema al obtener el saldo.");
         }
     });
+
+    fetch("https://db-projecto.vercel.app/verTransacciones", {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Respuesta no OK');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log("Datos de transacciones recibidos:", data);
+    
+        // Si no se recibieron transacciones
+        if (data.length === 0) {
+            console.log("No se encontraron transacciones.");
+        }
+    
+        const movementsRectangle = document.getElementById("movementsRectangle");
+        movementsRectangle.innerHTML = "<ul id='transactionsList' class='transactions-list'></ul>";
+    
+        const transactionsList = document.getElementById("transactionsList");
+    
+        // Iteramos sobre las primeras 3 transacciones y aplicamos el estilo
+        data.slice(0, 3).forEach(transaction => {
+            const listItem = document.createElement("li");
+            listItem.classList.add("transaction-item");
+    
+            // Agregamos el contenido de cada transacción
+            listItem.innerHTML = `
+                <div class="transaction-details">
+                    <p class="transaction-amount">Monto: $${transaction.monto}</p>
+                    <p class="transaction-destination">Destino: ${transaction.destino}</p>
+                </div>
+            `;
+    
+            // Agregamos el `li` a la lista
+            transactionsList.appendChild(listItem);
+        });
+    })
+    .catch(error => {
+        console.error("Error al obtener las transacciones:", error);
+        alert("Hubo un problema al cargar las transacciones.");
+    });
+    
+    
 });
