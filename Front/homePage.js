@@ -7,18 +7,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const bellIcon = document.getElementById("bellIcon");
-        bellIcon.addEventListener("click", () => {
-            alert("Proximamente...");
-            return;
+    bellIcon.addEventListener("click", () => {
+        alert("Proximamente...");
+        return;
     })
-
 
     const helpIcon = document.getElementById("helpIcon");
-        helpIcon.addEventListener("click", () => {
-            alert("Proximamente...");
-            return;
+    helpIcon.addEventListener("click", () => {
+        alert("Proximamente...");
+        return;
     })
-
+        
     const token = localStorage.getItem('authToken');
 
     if (!token) {
@@ -88,10 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     });
                 }
             }
-
             localStorage.setItem("saldoCuenta", saldo);
-            console.log("Saldo guardado en localStorage:", localStorage.getItem("saldoCuenta"));
-            
 
         } else {
             lblSaldo.textContent = "Saldo no disponible";
@@ -105,4 +101,50 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Hubo un problema al obtener el saldo.");
         }
     });
+
+    fetch("https://db-projecto.vercel.app/verTransacciones", {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Respuesta no OK');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log("Datos de transacciones recibidos:", data);
+    
+        if (data.length === 0) {
+            console.log("No se encontraron transacciones.");
+        }
+    
+        const movementsRectangle = document.getElementById("movementsRectangle");
+        movementsRectangle.innerHTML = "<ul id='transactionsList'></ul>";
+    
+        const transactionsList = document.getElementById("transactionsList");
+    
+        data.forEach(transaction => {
+            const listItem = document.createElement("li");
+            listItem.classList.add("transaction-item");
+    
+            // Mostrar el nombre y apellido del destinatario (persona que recibió el dinero)
+            listItem.innerHTML = `
+                <div class="transaction-details">
+                    <p><strong>Monto:</strong> $${transaction.monto}</p>
+                    <p><strong>Destino:</strong> ${transaction.nombre_destino} ${transaction.apellido_destino}</p>
+                </div>
+            `;
+            transactionsList.appendChild(listItem);
+        });
+    })
+    .catch(error => {
+        console.error("Error al obtener las transacciones:", error);
+        alert("Hubo un problema al cargar las transacciones.");
+    });
+    
+    
 });

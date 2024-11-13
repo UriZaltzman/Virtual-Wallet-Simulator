@@ -290,3 +290,47 @@ footer {
 .footer-section i{
     font-size: 20px;
 }
+
+#movementsRectangle {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 90%; /* O ajusta el porcentaje según el diseño */
+    background-color: #CCDBF7;
+    border-radius: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#transactionsList {
+    list-style-type: none; /* Remueve los bullets por defecto */
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Asegura que la lista ocupe todo el ancho del contenedor */
+}
+
+.transaction-item {
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.transaction-item::before {
+    content: "";
+    width: 8px;   
+    height: 8px;  
+    background-color: #3368A6; 
+    border-radius: 50%; 
+    margin-right: 15px;
+}
+
+.transaction-details p {
+    color: #3368A6;
+    font-size: 14px;
+    margin: 5px 0;
+    margin-left: 5px;
+    font-weight: bold;
+}

@@ -77,13 +77,15 @@ h3 {
 }
 
 .cvu{
+    text-align: center;
     font-weight: bold;
     color: #000;
-    text-align: left;
-    margin-right: 140px;
+    /* text-align: left;
+    margin-right: 140px; */
 }
 
 .CVU{
+    text-align: center;
     font-size: 16px;
     margin-bottom: 10px;
     text-decoration: underline;
@@ -94,27 +96,31 @@ h3 {
 }
 
 .alias{
+    text-align: center;
     font-weight: bold;
     color: #000;
-    text-align: left;
-    margin-right: 140px;
+    /* text-align: left;
+    margin-right: 140px; */
 }
 
 .Alias{
+    text-align: center;
     margin-top:15px;
     margin-bottom: 10px;
     font-size: 16px;
     text-decoration: underline;
 }
 
+
 i{
     cursor: pointer;
 }
 
 .btnCompartir {
-    position: relative;
+   /*  position: relative;
     top: 53.5px;
-    left: 70px;
+    left: 38px; */
+    margin-top: 10px;
     height: 40px;
     width: 240px;
     cursor: pointer;
