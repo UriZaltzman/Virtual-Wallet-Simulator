@@ -103,11 +103,6 @@ p{
     /* border: 1px solid #000; */
 }
 
-span{
-    position: relative;
-    top: 5px;
-}
-
 .montos button:hover{
     color: #005ec9;
 }
