@@ -26,3 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         numeroSubeElement.textContent = `Número de SUBE: ${nroSube}`;
     }
 });
+
+/*function cargarSube(monto){
+    fetch("")
+}*/
