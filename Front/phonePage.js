@@ -32,26 +32,4 @@ document.addEventListener("DOMContentLoaded", () => {
             sessionStorage.setItem("tipo3", 3)
             return;
     })
-
-<<<<<<< Updated upstream
-    const btnPersonal = document.getElementById("btnPersonal");
-    btnPersonal.addEventListener("click", () => {
-            sessionStorage.setItem("TipoEmpresa", 1)
-            return;
-    })
-
-    const btnClaro = document.getElementById("btnClaro");
-    btnClaro.addEventListener("click", () => {
-            sessionStorage.setItem("TipoEmpresa", 2)
-            return;
-    })
-
-    const btnMovistar = document.getElementById("btnMovistar");
-    btnMovistar.addEventListener("click", () => {
-            sessionStorage.setItem("TipoEmpresa", 3)
-            return;
-    })
-})
-=======
-})
->>>>>>> Stashed changes
+});
