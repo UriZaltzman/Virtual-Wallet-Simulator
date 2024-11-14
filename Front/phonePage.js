@@ -16,7 +16,24 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Proximamente...");
         return;
     })
+    
+    const btnPersonal = document.getElementById("btnPersonal");
+    btnPersonal.addEventListener("click", () => {
+            sessionStorage.setItem("tipo1", 1)
+            return;
+    })
+    const btnClaro = document.getElementById("btnClaro");
+    btnClaro.addEventListener("click", () => {
+            sessionStorage.setItem("tipo2", 2)
+            return;
+    })
+    const btnMovistar = document.getElementById("btnMovistar");
+    btnMovistar.addEventListener("click", () => {
+            sessionStorage.setItem("tipo3", 3)
+            return;
+    })
 
+<<<<<<< Updated upstream
     const btnPersonal = document.getElementById("btnPersonal");
     btnPersonal.addEventListener("click", () => {
             sessionStorage.setItem("TipoEmpresa", 1)
@@ -35,3 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
     })
 })
+=======
+})
+>>>>>>> Stashed changes

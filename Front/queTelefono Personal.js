@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const btnGuardar = document.getElementById("btnGuardar");  
     const lblTelefono = document.getElementById("lblTelefono");
 
+    const tipo = sessionStorage.getItem("tipo")
+    console.log(tipo)
+
     if (lblTelefono && inputTelefono && btnGuardar) {
         lblTelefono.style.display = "none";
         inputTelefono.style.display = "none";
@@ -25,13 +28,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
             const token = localStorage.getItem('authToken');
 
-            fetch("https://db-projecto.vercel.app/ingresarTelefono", {
+            fetch("http://localhost:3000/RegistrarTelefono", {
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json",
                     "Authorization": `Bearer ${token}`
                 },
-                body: JSON.stringify({ nroTelefono: telefonoValue })
+                body: JSON.stringify({ nroTelefono: telefonoValue, tipoEmpresa: sessionStorage.getItem("tipo1") })
             })
             .then(response => {
                 if (!response.ok) {
@@ -40,11 +43,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 return response.json();
             })
             .then(data => {
+                console.log(data);
                 alert("Has ingresado el Número de tu Teléfono con éxito");
-                inputTelefono.value = "";
-                inputTelefono.style.display = "none";
-                btnGuardar.style.display = "none";
-                addTelefono.style.display = "inline";
+                return window.location.href = "elegirTelefono Personal.html";
             })
             .catch(error => {
                 console.error("Hubo un problema con el registro:", error);
