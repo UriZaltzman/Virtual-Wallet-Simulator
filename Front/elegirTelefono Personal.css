@@ -166,7 +166,7 @@ footer {
     font-size: 20px;
 }
 
-.tarjeta-btn{
+.telefono-btn{
     border: 1px solid #000;
     border-radius: 10px;
     background-color: #80CBC4;
@@ -174,7 +174,7 @@ footer {
     cursor: pointer;
 }
 
-.tarjeta-btn:hover{
+.telefono-btn:hover{
     background-color: #3368A6;
 }
 
@@ -182,3 +182,10 @@ footer {
     color: #000;
     cursor: pointer;
 }
+
+#telefonoList button{
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+} 
