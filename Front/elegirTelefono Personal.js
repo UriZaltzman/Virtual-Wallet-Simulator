@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     continuarBtn.disabled = true;
 
     // Fetch para obtener la lista de teléfonos
-    fetch("https://db-projecto.vercel.app/verTelefonos", {
+    fetch("https://db-projecto.vercel.app/servicios/verTelefonos", {
         method: 'GET',
         headers: {
             "Authorization": `Bearer ${token}`,

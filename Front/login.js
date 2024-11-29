@@ -29,7 +29,7 @@ document.getElementById('button').addEventListener('click', async () => {
     }
 
     try {
-        const response = await fetch('https://db-projecto.vercel.app/login', {
+        const response = await fetch('https://db-projecto.vercel.app/auth/login', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"

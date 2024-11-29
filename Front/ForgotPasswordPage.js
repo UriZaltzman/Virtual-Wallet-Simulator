@@ -60,7 +60,7 @@ btnReestablecer.addEventListener("click", function() {
                         mail: emailValue.value
                     };
         
-                    fetch("https://db-projecto.vercel.app/forgotPassword", {
+                    fetch("https://db-projecto.vercel.app/auth/forgotPassword", {
                         method: "POST",
                         headers: {
                             // "Authorization": `Bearer ${token}`,

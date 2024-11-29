@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const continuarBtn = document.getElementById("continuar");
     const token = localStorage.getItem("authToken"); 
 
-    fetch("https://db-projecto.vercel.app/traerSube", {
+    fetch("https://db-projecto.vercel.app/servicios/traerSube", {
         method: "GET",
         headers: {
             "Content-Type": "application/json",

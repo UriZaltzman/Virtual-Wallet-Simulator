@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
   
-    fetch("https://db-projecto.vercel.app/filtro", {
+    fetch("https://db-projecto.vercel.app/transacciones/filtro", {
         method: 'GET',
         headers: {
             "Content-Type": "application/json"

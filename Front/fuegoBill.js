@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     window.location.href = "pagarImpuesto.html";*/
                     const token = localStorage.getItem('authToken');  // Asegúrate de que 'authToken' contiene el token
     
-                    fetch("https://db-projecto.vercel.app/pagarImpuesto", {
+                    fetch("https://db-projecto.vercel.app/servicios/pagarImpuesto", {
                         method: 'POST',
                         headers: {
                             "Authorization": `Bearer ${token}`,  // Envía el token en el formato correcto

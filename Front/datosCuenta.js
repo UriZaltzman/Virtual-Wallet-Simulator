@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     
 
-    fetch("https://db-projecto.vercel.app/compartir", {
+    fetch("https://db-projecto.vercel.app/info/compartir", {
         method: 'GET',
         headers: {
             "Authorization": `Bearer ${token}`,

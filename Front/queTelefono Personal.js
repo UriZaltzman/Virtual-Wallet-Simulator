@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             const token = localStorage.getItem('authToken');
 
-            fetch("https://db-projecto.vercel.app/RegistrarTelefono", {
+            fetch("https://db-projecto.vercel.app/servicios/RegistrarTelefono", {
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json",

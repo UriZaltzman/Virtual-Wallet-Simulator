@@ -5,7 +5,7 @@ btnPagar.addEventListener("click", function() {
     const telefonoDestino = 21;  // Ajusta el ID del teléfono destino según el que se deba pagar
     const token = localStorage.getItem("authToken"); 
 
-    fetch("https://db-projecto.vercel.app/pagarTelefono", {
+    fetch("https://db-projecto.vercel.app/servicios/pagarTelefono", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

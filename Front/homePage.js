@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Solicitar saldo solo si hay un token válido
-    fetch("https://db-projecto.vercel.app/verSaldo", {
+    fetch("https://db-projecto.vercel.app/info/verSaldo", {
         method: 'GET',
         headers: {
             "Authorization": `Bearer ${token}`,
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (btnRecargar) {
                     btnRecargar.addEventListener("click", () => {
                         console.log("Botón de recargar presionado");
-                        fetch("https://db-projecto.vercel.app/recargarSaldo", {
+                        fetch("https://db-projecto.vercel.app/info/recargarSaldo", {
                             method: "PUT",
                             headers: {
                                 "Content-Type": "application/json",
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    fetch("https://db-projecto.vercel.app/verTransacciones", {
+    fetch("https://db-projecto.vercel.app/transacciones/verTransacciones", {
         method: "GET",
         headers: {
             "Content-Type": "application/json",

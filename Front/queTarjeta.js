@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     //fetch("https://db-projecto.vercel.app/ingresarSube", {
-        fetch("https://db-projecto.vercel.app/ingresarSube", {
+        fetch("https://db-projecto.vercel.app/servicios/ingresarSube", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
